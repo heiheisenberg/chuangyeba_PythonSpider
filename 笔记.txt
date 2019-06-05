@@ -1,0 +1,44 @@
+//*[@id="signTable"]
+# 签到表
+//*[@id="Wed Jun 05 00:00:00 CST 2019"]/p[2]/i
+close bg right
+## 开始学习
+//*[@id="inProgressCourseData"]/div/div[2]/p[2]/span/a
+## 视屏
+//*[@id="video"]
+
+# 提交
+//*[@class="layui-layer-btn0"]
+
+<div class="layui-layer layui-layer-page  layer-anim" id="layui-layer100001" type="page" times="100001" showtime="0" contype="string" style="z-index: 100002; width: 600px; height: 400px; top: 150px; left: 465px;">
+	<div class="layui-layer-title" style="cursor: move;">随堂测试</div>
+	<div id="doclasswork" class="layui-layer-content" style="height: 299px;">
+		<div style="top: 10px;position: absolute;padding: 20px 40px;" id="homeWorkTemp">  
+			<p>  <label>1. </label>  <lable>  （单选）  </lable> <label>大学生是创业的三有人员，因为大学生（）</label> </p>
+			<p class="options" cwid="1151295" itemtype="1">      
+			<span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151295" id="A0" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A0" style="margin-right: 20px;cursor: pointer;">有青春</label><br> </span>     
+			<span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151295" id="B0" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B0" style="margin-right: 20px;cursor: pointer;">有资源</label><br> </span>      
+			<span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151295" id="C0" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C0" style="margin-right: 20px;cursor: pointer;">有人脉</label><br> </span>     
+			<span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151295" id="D0" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D0" style="margin-right: 20px;cursor: pointer;">有项目</label><br> </span>      
+			</p> <p class="answer">答案：[A]</p>  
+			<p>  <label>2. </label>  <lable>  （单选）  </lable> <label>大学生是创业的三无人员，因为大学生（）</label> </p>
+			<p class="options" cwid="1151296" itemtype="1"> 
+			<span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151296" id="A1" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A1" style="margin-right: 20px;cursor: pointer;">无资金</label><br> </span>     
+			<span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151296" id="B1" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B1" style="margin-right: 20px;cursor: pointer;">无人脉</label><br> </span>      
+			<span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151296" id="C1" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C1" style="margin-right: 20px;cursor: pointer;">无项目</label><br> </span>     
+			<span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151296" id="D1" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D1" style="margin-right: 20px;cursor: pointer;">以上三项都对</label><br> </span>      
+			</p> <p class="answer">答案：[D]</p>  
+			<p>  <label>3. </label>  <lable>  （单选）  </lable> <label>大学生是创业的三有人员，其中最重要的是（）</label> </p> 
+			<p class="options" cwid="1151297" itemtype="1">      
+			<span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151297" id="A2" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A2" style="margin-right: 20px;cursor: pointer;">有朋友</label><br> </span>     
+			<span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151297" id="B2" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B2" style="margin-right: 20px;cursor: pointer;">有同学</label><br> </span>      
+			<span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151297" id="C2" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C2" style="margin-right: 20px;cursor: pointer;">有老师</label><br> </span>     
+			<span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151297" id="D2" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D2" style="margin-right: 20px;cursor: pointer;">有团队</label><br> </span>      
+			</p> <p class="answer">答案：[D]</p>  </div> </div>
+			<span class="layui-layer-setwin"></span>
+	<div class="layui-layer-btn layui-layer-btn-c"><a class="layui-layer-btn0">提交</a></div>
+	<span class="layui-layer-resize"></span>
+</div>
+
+//*[@id="687967"]
+//*[@id="zsTotalHour"]
