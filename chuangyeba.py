@@ -81,17 +81,16 @@ class Hunst(object):
         
         # 继续上一次进度
         video_element = WebDriverWait(self.driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, '//*[@id="video"]')))
-        ActionChains(self.driver).move_to_element(video_element)
+        ActionChains(self.driver).move_to_element(video_element).perform()
         print("start play...")
         self.driver.execute_script("return arguments[0].play()",video_element)  # 开始播放
         #time.sleep(10)
         
-        #print('stop play...')
-        #self.driver.execute_script("return arguments[0].pause()",video_element)  # 暂停播放
-        
         # 爬取播放列表
         with open('playlist.txt','w') as f:
             f.write(self.driver.page_source)
+            
+        # 这里进行正则匹配，得到视频播放列表
             
         while True:
             try:
