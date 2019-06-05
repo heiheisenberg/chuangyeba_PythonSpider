@@ -42,3 +42,10 @@ close bg right
 
 //*[@id="687967"]
 //*[@id="zsTotalHour"]
+
+## 正则表达式
+import re
+with open('playllist.txt', 'r') as f:
+	sourcedata = f.read()
+playlist = re.compile('<a href="javascript:void\(0\)" id="(\d+)" title="(.*?)".*?class="(.*?)".*?>')
+re.findall(playlist, sourcedata)

@@ -10,6 +10,7 @@ from selenium.webdriver.common.keys import Keys
 import pyautogui      # 这里是用于保存图片
 import pyperclip
 from yanzhengma import *  # 验证码接口
+from setting import *     #这里保存了所有用户参数
 
 
 class Hunst(object):
@@ -19,24 +20,9 @@ class Hunst(object):
  
     
     def __init__(self):
-        # 下载的验证码保存路径
-        self.pic_dir = 'E:\PythonSpider\创业网课\getverifycode.jpg'
-        
-        self.filename    = 'getverifycode.jpg'                        
-        # 验证码类型，# 例：1004表示4位字母数字，不同类型收费不同。请准确填写，否则影响识别率。在此查询所有类型 http://www.yundama.com/price.html
-        self.codetype    = 1004
-        # 超时时间，秒
-        self.timeout     = 60 
-        self.username = 'mating'
-        self.password = 'mating'
-        self.appid = 1
-        self.appkey = '22cc5376925e9387a23cf797cb9ba745'
-        
-        self.login_number = '1608040112'
-        self.login_password = 'abc123'
-        
+
         chrome_options = webdriver.ChromeOptions()
-        #chrome_options.add_argument('--headless')
+        #chrome_options.add_argument('--headless')       # 无界面运行
         #chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--start-maximized') # 最大化
         self.driver = webdriver.Chrome(chrome_options=chrome_options)
@@ -51,8 +37,8 @@ class Hunst(object):
         WebDriverWait(self.driver, 10, 0.5).until(EC.element_to_be_clickable((By.XPATH, '//img[@id="verifycodeImg"]')))
         login_element = self.driver.find_element_by_xpath('//img[@id="verifycodeImg"]')
         # 保存图片,保存图片前先删除原来验证码
-        if os.path.exists(self.pic_dir):
-            os.remove(self.pic_dir)
+        if os.path.exists(pic_dir):
+            os.remove(pic_dir)
         action = ActionChains(self.driver).move_to_element(login_element)
         action.context_click(login_element)
         action.perform()
@@ -60,7 +46,7 @@ class Hunst(object):
         time.sleep(0.5)
         
         #将地址以及文件名复制
-        pyperclip.copy(self.pic_dir)
+        pyperclip.copy(pic_dir)
         # 粘贴
         pyautogui.hotkey('ctrlleft','V')
         pyautogui.typewrite(['enter'])
@@ -68,7 +54,7 @@ class Hunst(object):
         # 接入云打码平台输入验证码
         # 初始化
         time.sleep(2)
-        yundama = YDMHttp(self.username, self.password, self.appid, self.appkey)
+        yundama = YDMHttp(username, password, appid, appkey)
         # 登陆云打码
         uid = yundama.login();
         print('uid: %s' % uid)
@@ -77,13 +63,13 @@ class Hunst(object):
         print('balance: %s' % balance)
         
         # 开始识别，图片路径，验证码类型ID，超时时间（秒），识别结果
-        cid, result = yundama.decode(self.filename, self.codetype, self.timeout);
+        cid, result = yundama.decode(filename, codetype, timeout);
         print('cid: %s, result: %s' % (cid, result))
         
         # 填入验证码，学号，密码
         self.driver.find_element_by_xpath('//*[@id="verifcode"]').send_keys(result)
-        self.driver.find_element_by_xpath('//*[@id="username"]').send_keys(self.login_number)
-        self.driver.find_element_by_xpath('//*[@id="password"]').send_keys(self.login_password)
+        self.driver.find_element_by_xpath('//*[@id="username"]').send_keys(login_number)
+        self.driver.find_element_by_xpath('//*[@id="password"]').send_keys(login_password)
         self.driver.find_element_by_xpath('//*[@id="login_btn"]').click()
         
         # 现在开始进入刷课环节，先会弹出签到表
