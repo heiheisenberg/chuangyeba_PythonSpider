@@ -10,6 +10,13 @@ close bg right
 # 提交
 //*[@class="layui-layer-btn0"]
 
+# 随堂测试
+//*[@id="layui-layer100001"]/div[1]
+//div[@class="layui-layer-title"]
+
+# 题目主体
+//*[@id="homeWorkTemp"]
+
 <div class="layui-layer layui-layer-page  layer-anim" id="layui-layer100001" type="page" times="100001" showtime="0" contype="string" style="z-index: 100002; width: 600px; height: 400px; top: 150px; left: 465px;">
 	<div class="layui-layer-title" style="cursor: move;">随堂测试</div>
 	<div id="doclasswork" class="layui-layer-content" style="height: 299px;">

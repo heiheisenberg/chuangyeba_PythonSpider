@@ -81,21 +81,18 @@ class Hunst(object):
         
         # 继续上一次进度
         video_element = WebDriverWait(self.driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, '//*[@id="video"]')))
-        ActionChains(self.driver).move_to_element(video_element)
+        ActionChains(self.driver).move_to_element(video_element).perform()
         print("start play...")
         self.driver.execute_script("return arguments[0].play()",video_element)  # 开始播放
         #time.sleep(10)
         
-        #print('stop play...')
-        #self.driver.execute_script("return arguments[0].pause()",video_element)  # 暂停播放
-        
         # 爬取播放列表
         with open('playlist.txt','w') as f:
             f.write(self.driver.page_source)
-            
+        
         while True:
             try:
-                WebDriverWait(self.driver, 10, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//div[@class="layui-layer-title"]')))
+                ceshi_element = WebDriverWait(self.driver, 10, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//div[@class="layui-layer-title"]')))
                 print('题目弹出...')
                 # 在这里插入做题代码
                 print('做题完毕')
@@ -104,10 +101,7 @@ class Hunst(object):
             except TimeoutException:
                 pass
                 
-            ##如果视频播放完毕，切换下一个            
-            
-
-            
+            ##如果视频播放完毕，切换下一个
         
     def quit(self):
         self.driver.quit()
@@ -116,5 +110,3 @@ class Hunst(object):
 if __name__ == '__main__':
     hnust = Hunst()
     hnust.visit_index()
-        
-        
