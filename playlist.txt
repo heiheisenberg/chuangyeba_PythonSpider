@@ -623,13 +623,13 @@
                             </ul>
                         </li>
                     
-                        <li class="videoPlayingLi">
+                        <li class="">
                             <p class="part ">
                                 <span>第2章 创业者与创业团队</span><i class="bg"></i>
                             </p>
                             <ul class="partul" index="2" style="display: block">
                                 
-                                    <li coursetype="1" class="videoPlaying">
+                                    <li coursetype="1" class="">
                                         <p class="part01">
                                             <a href="javascript:void(0)" id="687977" title="创业者的定义及类型" canbelearn="true" currentknowledge="1" coursetype="1" class="  " onclick="LearnCourse.initVideo(6493,687977,1,event)">
                                                 <i class="bg"></i>2.1
@@ -5417,4 +5417,4 @@ $(".checkboxCli").live('click',function(){
 </script>
 
 
-<div class="r-fixed" style="bottom: 300px;"><span>在线客服</span>                <div class="item0"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank"></a></div>                <div class="item1">                    <div class="info">                        <img src="/openresources/app_download_qr_code/image/2018/09/a9bb93efcfc292d16e0aa496303e96cf_c.png">                        <span style="width:80px; color:#999999; margin-top: 5px; margin-bottom:-20px;">App下载</span>                    </div>                </div>                <div class="item2"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank" style="height:100%;width: 100%;display: block;"></a></div></div></body></html>
+<div class="r-fixed" style="bottom: 300px;"><span>在线客服</span>                <div class="item0"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank"></a></div>                <div class="item1">                    <div class="info">                        <img src="/openresources/app_download_qr_code/image/2018/09/a9bb93efcfc292d16e0aa496303e96cf_c.png">                        <span style="width:80px; color:#999999; margin-top: 5px; margin-bottom:-20px;">App下载</span>                    </div>                </div>                <div class="item2"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank" style="height:100%;width: 100%;display: block;"></a></div></div><div class="layui-layer-move"></div></body></html>

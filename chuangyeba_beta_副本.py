@@ -111,18 +111,7 @@ class Hunst(object):
             with open('playlist.txt','w') as f:
                 f.write(self.driver.page_source)
                 f.close()
-            # 送入解析函数，得到当前视频id 和播放状态class, 下一个视频id
-            
-            #get_play_list('playlist.txt')
-            # print('current_id:%s     next_id:%s' %(current_id, next_id))
-            # if (current_id == '' ) and (next_id != ''):
-                # # 当前视频播放完毕
-                # # 切换到下一个视频 //*[@id="687967"]
-                # time.sleep(10)      #等待当前视频片尾结束
-                # next_id_xpath = '//*[@id="{0}"]'.format(int(next_id))
-                # self.driver.find_element_by_xpath(next_id_xpath).click()
-            # elif next_id == '':
-                # print('所有视频都播放完毕，程序退出，感谢使用') 
+         
             #这里代码在视频生命周期只执行一次
             if flag:
                 current_id, next_id = get_play_list('playlist.txt')

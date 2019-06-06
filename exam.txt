@@ -69,7 +69,7 @@
     <script type="text/javascript" src="http://hnust.hunbys.com/plugins/other/pdfobject.js"></script>
     <script type="text/javascript" src="http://hnust.hunbys.com/plugins/layer/layer.js"></script><link rel="stylesheet" href="http://hnust.hunbys.com/plugins/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss">
     <script type="text/javascript" src="http://hnust.hunbys.com/js/md5.js"></script>
-<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=433278"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"></head>
+<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=433280"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"></head>
 <body style=" background-color:#fff;" id="hostBody">
 <base href="http://hnust.hunbys.com:80/">
 <meta charset="UTF-8">
@@ -294,7 +294,7 @@
             
             <span id="countDown">
                 <a class="share" style="padding-left: 200px;">当前成绩：<span id="curScore">0.0</span>分</a>
-                <input id="beginTime" type="hidden" value="20190606155110">
+                <input id="beginTime" type="hidden" value="20190606170508">
             </span>
             <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
         </div>
@@ -309,14 +309,14 @@
                 	</li>
                     
                         <li class="selected2">
-                            <p class="part ">
+                            <p class="part finish black333">
                                 <span>第1章 创业与人生</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="1" style="display: block;">
+                            <ul class="partul" index="1" style="display: none">
                                 
                                     <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687967" title="从零到一有多远.知识讲解篇" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish" onclick="LearnCourse.initVideo(6493,687967,1,event)">
+                                            <a href="javascript:void(0)" id="687967" title="从零到一有多远.知识讲解篇" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687967,1,event)">
                                                 <i class="bg"></i>1.1
                                                  
 												    
@@ -333,7 +333,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/deaf32362f729cc262687b3e05650144.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="display: none;">
+                                        <div class="show">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -366,7 +366,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/a3f30f1915af2659647e36aa53dc60fe.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="">
+                                        <div class="show">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -399,7 +399,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/d675150c64e939aaa93bbc3f8048d578.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="">
+                                        <div class="show">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -432,7 +432,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/70f09888969b8912c3a39ac2dfdf986c.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="">
+                                        <div class="show">
                                             <div class="date">
                                                 <p>作业上交：无</p>
                                                 <p>在线答疑：-</p>
@@ -465,7 +465,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/3ed4b7ced774e53edda2f6a0a2c9e29f.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="">
+                                        <div class="show">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -481,7 +481,7 @@
                                 
                                     <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687972" title="拓展学习-学会从失败中学习.知识讲解篇" canbelearn="true" currentknowledge="1" coursetype="1" class="videoFinish" onclick="LearnCourse.initVideo(6493,687972,1,event)">
+                                            <a href="javascript:void(0)" id="687972" title="拓展学习-学会从失败中学习.知识讲解篇" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687972,1,event)">
                                                 <i class="bg"></i>1.6
                                                  
 												    
@@ -498,7 +498,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/a2b9e5355544ad487e7fd2bd34bfe1b8.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="display: none;">
+                                        <div class="show">
                                             <div class="date">
                                                 <p>作业上交：无</p>
                                                 <p>在线答疑：-</p>
@@ -514,7 +514,7 @@
                                 
                                     <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687973" title="拓展学习-学会从失败中学习.实战篇(上)" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish" onclick="LearnCourse.initVideo(6493,687973,1,event)">
+                                            <a href="javascript:void(0)" id="687973" title="拓展学习-学会从失败中学习.实战篇(上)" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687973,1,event)">
                                                 <i class="bg"></i>1.7
                                                  
 												    
@@ -531,7 +531,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/bcdaf79b4bd025a52aa7bbc7c88bb672.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="display: none;">
+                                        <div class="show">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -545,9 +545,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1" class="selected">
+                                    <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687974" title="拓展学习-学会从失败中学习.实战篇(中)" canbelearn="true" currentknowledge="0" coursetype="1" class="" onclick="LearnCourse.initVideo(6493,687974,1,event)">
+                                            <a href="javascript:void(0)" id="687974" title="拓展学习-学会从失败中学习.实战篇(中)" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687974,1,event)">
                                                 <i class="bg"></i>1.8
                                                  
 												    
@@ -564,7 +564,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/3207e91b80b476cd90d20742d97c9186.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="display: block;">
+                                        <div class="show">
                                             <div class="date">
                                                 <p>作业上交：无</p>
                                                 <p>在线答疑：-</p>
@@ -578,9 +578,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1">
+                                    <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687975" title="拓展学习-学会从失败中学习.实战篇(下)" canbelearn="false" currentknowledge="0" coursetype="1" class="  black999" onclick="LearnCourse.initVideo(6493,687975,1,event)">
+                                            <a href="javascript:void(0)" id="687975" title="拓展学习-学会从失败中学习.实战篇(下)" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687975,1,event)">
                                                 <i class="bg"></i>1.9
                                                  
 												    
@@ -597,7 +597,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/62f737e10155f79774bd034d0f1012c5.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="">
+                                        <div class="show">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -623,15 +623,15 @@
                             </ul>
                         </li>
                     
-                        <li>
+                        <li class="">
                             <p class="part ">
                                 <span>第2章 创业者与创业团队</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="2" style="display: none;">
+                            <ul class="partul" index="2" style="display: block">
                                 
-                                    <li coursetype="1">
+                                    <li coursetype="1" class="">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687977" title="创业者的定义及类型" canbelearn="false" currentknowledge="0" coursetype="1" class="  black999" onclick="LearnCourse.initVideo(6493,687977,1,event)">
+                                            <a href="javascript:void(0)" id="687977" title="创业者的定义及类型" canbelearn="true" currentknowledge="1" coursetype="1" class="  " onclick="LearnCourse.initVideo(6493,687977,1,event)">
                                                 <i class="bg"></i>2.1
                                                  
 												    
@@ -648,7 +648,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/3161d9365389f4627b61213db867f36c.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="display: none;">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -681,7 +681,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/65ee2e71089bfd964503167513dbd75e.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -714,7 +714,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/f5a1e9e0904cd17f0718836df3583740.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -747,7 +747,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/d6d698bca02592e2581a70ec5a9af083.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -780,7 +780,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/ac68f90524431a711a0dbbb2fc188a02.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：无</p>
                                                 <p>在线答疑：-</p>
@@ -813,7 +813,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/33ecb3a060761fc5c399711e48badfa0.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -846,7 +846,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/ed8e0e357f0d6c15dd8f88e5cc3a75c5.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -879,7 +879,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/94f0e140fc338345a691c571d6145db7.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：无</p>
                                                 <p>在线答疑：-</p>
@@ -912,7 +912,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/a9aa772c55dcb276188008134befa57c.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -945,7 +945,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/aa87ad89ff0f81789e729c49c625dee6.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -978,7 +978,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/fbd7c5414535b81fb9c3eb4ba34d8cc4.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：无</p>
                                                 <p>在线答疑：-</p>
@@ -1011,7 +1011,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/b7bb7c3403660886458b2e3439374809.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -1044,7 +1044,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/675429b28eb2a8b698b1732afb665d6f.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -1077,7 +1077,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/f9b8d8498b64d108bb8f81d088af7bb2.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：无</p>
                                                 <p>在线答疑：-</p>
@@ -1110,7 +1110,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/55141a2e90c80a9687c379cdff2493d7.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：无</p>
                                                 <p>在线答疑：-</p>
@@ -1143,7 +1143,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/be79185de8b117f37f2627dcd38db389.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -1176,7 +1176,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/d9ed5ad89141eade7ad13f72b58048db.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：无</p>
                                                 <p>在线答疑：-</p>
@@ -1209,7 +1209,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/c8ea61c2e3c7dbc5aa4af5ee451ad0aa.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -1242,7 +1242,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/4bf2d3dae4936e3da75a26cee42e7b5c.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -1275,7 +1275,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/05d4f502be6f033dce8484971fc0d5a4.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -1308,7 +1308,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/f5367385d9b07fa6939874ff07bcf559.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -1341,7 +1341,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/a0ef97d7c23518058bc3a55b9d347585.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -1374,7 +1374,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/66412536a3a5a28a37c1d104022fb6d7.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -1404,7 +1404,7 @@
                             <p class="part ">
                                 <span>第3章 创业机会及其识别与评价</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="3" style="display: none;">
+                            <ul class="partul" index="3" style="display: none">
                                 
                                     <li coursetype="1">
                                         <p class="part01">
@@ -1983,7 +1983,7 @@
                             <p class="part ">
                                 <span>第4章 创业风险及识别与管理</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="4" style="display: none;">
+                            <ul class="partul" index="4" style="display: none">
                                 
                                     <li coursetype="1">
                                         <p class="part01">
@@ -2529,7 +2529,7 @@
                             <p class="part ">
                                 <span>第5章 商业模式及其设计与创新</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="5" style="display: none;">
+                            <ul class="partul" index="5" style="display: none">
                                 
                                     <li coursetype="1">
                                         <p class="part01">
@@ -3174,7 +3174,7 @@
                             <p class="part ">
                                 <span>第6章 创业资源及其管理</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="6" style="display: none;">
+                            <ul class="partul" index="6" style="display: none">
                                 
                                     <li coursetype="1">
                                         <p class="part01">
@@ -4182,7 +4182,7 @@
                             <p class="part ">
                                 <span>第7章 创业计划</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="7" style="display: none;">
+                            <ul class="partul" index="7" style="display: none">
                                 
                                     <li coursetype="1">
                                         <p class="part01">
@@ -4530,7 +4530,7 @@
                             <p class="part ">
                                 <span>第8章 新企业的创办与管理</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="8" style="display: none;">
+                            <ul class="partul" index="8" style="display: none">
                                 
                                     <li coursetype="1">
                                         <p class="part01">
@@ -4812,7 +4812,7 @@
                         <p class="part exam">
                             <span class="examMenu">考试</span><i class="bg"></i>
                         </p>
-                        <ul style="">
+                        <ul>
                             
                         </ul>
                     </li>
@@ -4829,10 +4829,10 @@
         </div>
         <div class="content03-right" id="videoContent" style="display: block;">
             <div class="video">
-                <video onclick="LearnCourse.stop()" id="video" cataid="" width="816" height="456" preload="" controls="controls" controlslist="nodownload" src="http://hnvideo.hunbys.com/180614_5381_807_%E7%AC%AC6%E8%AE%B2%E5%AD%A6%E4%BC%9A%E4%BB%8E%E5%A4%B1%E8%B4%A5%E4%B8%AD%E5%AD%A6%E4%B9%A0.%E5%AE%9E%E6%88%98%E7%AF%87%EF%BC%88%E4%B8%AD%EF%BC%89.mp4?sign=b7a4d9f2f8959251da8b36cb6216d6b9&amp;t=5cf8df9b&amp;schoolId=10534&amp;isValidate=1">
+                <video onclick="LearnCourse.stop()" id="video" cataid="" width="816" height="456" preload="" controls="controls" controlslist="nodownload" src="http://hnvideo.hunbys.com/180614_5381_807_%E7%AC%AC1%E8%AE%B2%E5%88%9B%E4%B8%9A%E8%80%85%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E7%B1%BB%E5%9E%8B.mp4?sign=9b74bd8486df24b40055f0559d187864&amp;t=5cf8e554&amp;schoolId=10534&amp;isValidate=1">
                     <source id="videoSource" src="" type="video/mp4;">
                 </video>
-                <p id="teachingResource" class="clearfix"><a data="/openresources/before/2018/04/3207e91b80b476cd90d20742d97c9186.pdf" download="" class="black999 down"><i class="bg"></i>教辅资料下载</a><a href="javascript:LearnCourse.nextCate(687974)" class="black999 pull-right">下一个</a></p>
+                <p id="teachingResource" class="clearfix"><a href="javascript:LearnCourse.nextCate(687977)" class="black999 pull-right">下一个</a></p>
             </div>
             <div class="tab-cnt">
                 <div class="tab-nav">
@@ -4858,7 +4858,7 @@
 
 
 	<input type="hidden" name="courseId" value="6493">
-	<input type="hidden" name="cataId" value="687974">
+	<input type="hidden" name="cataId" value="687977">
 	<!--输入框-->
    <div class="textarea">
        <p><textarea id="content"></textarea><div id="info-content" class="textarea-limit" style="float:right;">还可以输入<b>500</b>字</div></p>
@@ -5417,4 +5417,4 @@ $(".checkboxCli").live('click',function(){
 </script>
 
 
-<div class="r-fixed" style="bottom: 300px;"><span>在线客服</span>                <div class="item0"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank"></a></div>                <div class="item1">                    <div class="info">                        <img src="/openresources/app_download_qr_code/image/2018/09/a9bb93efcfc292d16e0aa496303e96cf_c.png">                        <span style="width:80px; color:#999999; margin-top: 5px; margin-bottom:-20px;">App下载</span>                    </div>                </div>                <div class="item2"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank" style="height:100%;width: 100%;display: block;"></a></div></div><div class="layui-layer-move"></div><div class="layui-layer-shade" id="layui-layer-shade100019" times="100019" style="z-index:100019; background-color:#000; opacity:0.5; filter:alpha(opacity=50);"></div><div class="layui-layer layui-layer-page  layer-anim" id="layui-layer100019" type="page" times="100019" showtime="0" contype="string" style="z-index: 100020; width: 600px; height: 400px; top: 150px; left: 465px;"><div class="layui-layer-title" style="cursor: move;">随堂测试</div><div id="doclasswork" class="layui-layer-content" style="height: 299px;"> <div style="top: 10px;position: absolute;padding: 20px 40px;" id="homeWorkTemp">  <p>  <label>1. </label>  <lable>  （单选）  </lable> <label>大学生创业的专业优势一般表现在（）</label> </p> <p class="options" cwid="1151339" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151339" id="A0" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A0" style="margin-right: 20px;cursor: pointer;">老师是宝贵的专业资源</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151339" id="B0" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B0" style="margin-right: 20px;cursor: pointer;">课外培训获得的专业知识</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151339" id="C0" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C0" style="margin-right: 20px;cursor: pointer;">九年义务教育</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151339" id="D0" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D0" style="margin-right: 20px;cursor: pointer;">购买专利技术</label><br> </span>      </p> <p class="answer">答案：[A]</p>  <p>  <label>2. </label>  <lable>  （单选）  </lable> <label>大学生创业的优势，包括（）</label> </p> <p class="options" cwid="1151340" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151340" id="A1" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A1" style="margin-right: 20px;cursor: pointer;">团队</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151340" id="B1" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B1" style="margin-right: 20px;cursor: pointer;">专业</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151340" id="C1" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C1" style="margin-right: 20px;cursor: pointer;">以上两项都对</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151340" id="D1" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D1" style="margin-right: 20px;cursor: pointer;">以上两项都不对</label><br> </span>      </p> <p class="answer">答案：[C]</p>  <p>  <label>3. </label>  <lable>  （单选）  </lable> <label>大学生创业，以下做法不当的是（）</label> </p> <p class="options" cwid="1151341" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151341" id="A2" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A2" style="margin-right: 20px;cursor: pointer;">请老师做创业顾问</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151341" id="B2" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B2" style="margin-right: 20px;cursor: pointer;">请老师做创业讲座</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151341" id="C2" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C2" style="margin-right: 20px;cursor: pointer;">充分利用教师资源</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151341" id="D2" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D2" style="margin-right: 20px;cursor: pointer;">充分利用教师资金</label><br> </span>      </p> <p class="answer">答案：[D]</p>  </div> </div><span class="layui-layer-setwin"></span><div class="layui-layer-btn layui-layer-btn-c"><a class="layui-layer-btn0">提交</a></div><span class="layui-layer-resize"></span></div></body></html>
+<div class="r-fixed" style="bottom: 300px;"><span>在线客服</span>                <div class="item0"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank"></a></div>                <div class="item1">                    <div class="info">                        <img src="/openresources/app_download_qr_code/image/2018/09/a9bb93efcfc292d16e0aa496303e96cf_c.png">                        <span style="width:80px; color:#999999; margin-top: 5px; margin-bottom:-20px;">App下载</span>                    </div>                </div>                <div class="item2"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank" style="height:100%;width: 100%;display: block;"></a></div></div><div class="layui-layer-move"></div><div class="layui-layer-shade" id="layui-layer-shade100004" times="100004" style="z-index:100004; background-color:#000; opacity:0.5; filter:alpha(opacity=50);"></div><div class="layui-layer layui-layer-page  layer-anim" id="layui-layer100004" type="page" times="100004" showtime="0" contype="string" style="z-index: 100005; width: 600px; height: 400px; top: 150px; left: 465px;"><div class="layui-layer-title" style="cursor: move;">随堂测试</div><div id="doclasswork" class="layui-layer-content" style="height: 299px;"> <div style="top: 10px;position: absolute;padding: 20px 40px;" id="homeWorkTemp">  <p>  <label>1. </label>  <lable>  （单选）  </lable> <label>以下关于创业者的说法，正确的是（）</label> </p> <p class="options" cwid="1151346" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151346" id="A0" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A0" style="margin-right: 20px;cursor: pointer;">组织、管理一个生意或企业并承担其风险的人</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151346" id="B0" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B0" style="margin-right: 20px;cursor: pointer;">从事创造新事业的人</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151346" id="C0" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C0" style="margin-right: 20px;cursor: pointer;">从事开办新企业事业的人</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151346" id="D0" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D0" style="margin-right: 20px;cursor: pointer;">以上三项都对</label><br> </span>      </p> <p class="answer">答案：[D]</p>  <p>  <label>2. </label>  <lable>  （单选）  </lable> <label>以下关于创业者的说法，错误的是（）</label> </p> <p class="options" cwid="1151347" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151347" id="A1" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A1" style="margin-right: 20px;cursor: pointer;">创业者有广义与侠义之分</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151347" id="B1" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B1" style="margin-right: 20px;cursor: pointer;">创业者就是创办企业的人</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151347" id="C1" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C1" style="margin-right: 20px;cursor: pointer;">创业者包括从事创新事业的人</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151347" id="D1" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D1" style="margin-right: 20px;cursor: pointer;">参与创业活动的核心人员也是创业者</label><br> </span>      </p> <p class="answer">答案：[B]</p>  <p>  <label>3. </label>  <lable>  （单选）  </lable> <label>创业者是（）的人。</label> </p> <p class="options" cwid="1151348" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151348" id="A2" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A2" style="margin-right: 20px;cursor: pointer;">创办企业</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151348" id="B2" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B2" style="margin-right: 20px;cursor: pointer;">升官发财</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151348" id="C2" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C2" style="margin-right: 20px;cursor: pointer;">现实主义</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151348" id="D2" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D2" style="margin-right: 20px;cursor: pointer;">参与创业</label><br> </span>      </p> <p class="answer">答案：[D]</p>  </div> </div><span class="layui-layer-setwin"></span><div class="layui-layer-btn layui-layer-btn-c"><a class="layui-layer-btn0">提交</a></div><span class="layui-layer-resize"></span></div></body></html>
