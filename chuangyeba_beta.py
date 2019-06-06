@@ -129,9 +129,11 @@ class Hunst(object):
                 print('做题完毕')
                 self.driver.find_element_by_xpath('//*[@class="layui-layer-btn0"]').click()
                 time.sleep(2)   
-                ##如果视频播放完毕，切换下一个 
             except TimeoutException:
                 pass
+                
+            ##如果视频播放完毕，切换下一个，先要判断当前视频是否播放结束
+            
                 
 
 def get_exam_list(filename):
