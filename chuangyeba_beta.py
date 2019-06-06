@@ -99,42 +99,53 @@ class Hunst(object):
         ActionChains(self.driver).move_to_element(video_element).perform()
         print("start play...")
         self.driver.execute_script("return arguments[0].play()",video_element)  # 开始播放
-        #time.sleep(10)
-        
-        # 爬取播放列表
-        with open('playlist.txt','w') as f:
-            f.write(self.driver.page_source)
-            f.close()
-            
-        # 这里进行正则匹配，得到视频播放列表
-        #     
-        while True:
-            try:
-                WebDriverWait(self.driver, 10, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//div[@class="layui-layer-title"]')))
-                print('题目弹出...')
-                # 保存当前页面，提取原题与答案
-                with open('exam.txt', 'w') as f:
-                    f.write(self.driver.page_source)
-                    f.close()
+ 
+        ## 单独测试视频定位
+        self.driver.find_element_by_xpath('//*[@id="687967"]').click()
+        # 主循环
+        # while True:
+            # try:
+                # WebDriverWait(self.driver, 5, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//div[@class="layui-layer-title"]')))
+                # print('题目弹出...')
+                # # 保存当前页面，提取原题与答案
+                # with open('exam.txt', 'w') as f:
+                    # f.write(self.driver.page_source)
+                    # f.close()
 
-                for item in get_exam_list('exam.txt'):
-                    try:
-                        self.driver.find_element_by_xpath(item).click()
-                        time.sleep(1)
-                    except Exception as e:
-                        print(e)
-                        pass
+                # for item in get_exam_list('exam.txt'):
+                    # try:
+                        # self.driver.find_element_by_xpath(item).click()
+                        # time.sleep(1)
+                    # except Exception as e:
+                        # print(e)
+                        # pass
 
-                # 当一切都没问题时，提交答案
-                print('做题完毕')
-                self.driver.find_element_by_xpath('//*[@class="layui-layer-btn0"]').click()
-                time.sleep(2)   
-            except TimeoutException:
-                pass
+                # # 当一切都没问题时，提交答案
+                # print('做题完毕')
+                # self.driver.find_element_by_xpath('//*[@class="layui-layer-btn0"]').click()
+                # time.sleep(2)   
+            # except TimeoutException:
+                # pass
                 
-            ##如果视频播放完毕，切换下一个，先要判断当前视频是否播放结束
+            # ##如果视频播放完毕，切换下一个，先要判断当前视频是否播放结束
+            # # 爬取播放列表
+            # with open('playlist.txt','w') as f:
+                # f.write(self.driver.page_source)
+                # f.close()
+            # # 送入解析函数，得到当前视频id 和播放状态class, 下一个视频id
+            # current_id, next_id = get_play_list('playlist.txt')
+            # print('current_id:%s     next_id:%s' %(current_id, next_id))
+            # if (current_id == '' ) and (next_id != ''):
+                # # 当前视频播放完毕
+                # # 切换到下一个视频 //*[@id="687967"]
+                # time.sleep(10)      #等待当前视频片尾结束
+                # next_id_xpath = '//*[@id="{0}"]'.format(int(next_id))
+                # self.driver.find_element_by_xpath(next_id_xpath).click()
+            # elif next_id == '':
+                # print('所有视频都播放完毕，程序退出，感谢使用')
+
+                           
             
-                
 
 def get_exam_list(filename):
     with open(filename, 'r') as f:
@@ -148,6 +159,34 @@ def get_exam_list(filename):
         item = item + str(i)
         yield '//*[@id="{0}"]'.format(item)
 
+
+def get_play_list(filename):
+    videoFinish = []        #以看完视频列表
+    currentvideo = ''
+    nextvideo = ''
+    
+    with open(filename, 'r') as f:
+        sourcedata = f.read()
+        f.close()
+   
+    playcompile = re.compile('<a href="javascript:void\(0\)" id="(\d+)" title="(.*?)".*?class="(.*?)".*?>', re.S)
+    playlist    = re.findall(playcompile, sourcedata)
+
+    for item in playlist:
+        #print(item)
+        # yield{
+            # 'id':item[0],
+            # 'title':item[1],
+            # 'class':item[2].strip()
+        # }
+        if item[2].strip() == 'videoFinish':
+            videoFinish.append(item[0])
+        elif item[2].strip() == '': 
+            currentvideo = item[0]
+        elif item[2].strip() == 'black999':
+            nextvideo = item[0]
+            break                       # 找到下一个未播放视频就终止迭代
+    return currentvideo, nextvideo
 
 if __name__ == '__main__':
     hnust = Hunst()

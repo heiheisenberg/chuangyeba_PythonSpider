@@ -15,6 +15,7 @@ http://hnust.hunbys.com/web/tologin
 //*[@id="inProgressCourseData"]/div/div[2]/p[2]/span/a
 ## 视屏
 //*[@id="video"]
+//*[@id="687967"]
 
 # 习题选项
 //*[@id="A0"]
@@ -80,3 +81,15 @@ with open('playllist.txt', 'r') as f:
 	sourcedata = f.read()
 playlist = re.compile('<a href="javascript:void\(0\)" id="(\d+)" title="(.*?)".*?class="(.*?)".*?>')
 re.findall(playlist, sourcedata)
+
+## cookie
+Hm_lpvt_e3d5c180b9eb27e8dd46713b446fd944	1559791827
+Hm_lvt_e3d5c180b9eb27e8dd46713b446fd944		1559791446 ##
+JLXCKID										b1fbddc7-0c3f-4008-b58e-8f92a2c973ac
+JSESSIONID									C8B024F69A6073628AF84CBF9AA2CCE6
+
+Hm_lpvt_e3d5c180b9eb27e8dd46713b446fd944	1559791538
+Hm_lvt_e3d5c180b9eb27e8dd46713b446fd944		1559530870,1559533371,1559701410,1559787551
+JLXCKID										df5e6590-e174-4dd3-953d-3747c0b8cc83
+JSESSIONID									32B471416E29AFF715744910C8614C54
+
