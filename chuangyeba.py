@@ -99,12 +99,6 @@ class Hunst(object):
         ActionChains(self.driver).move_to_element(video_element).perform()
         print("start play...")
         self.driver.execute_script("return arguments[0].play()",video_element)  # 开始播放
-        #time.sleep(10)
-        
-        # 爬取播放列表
-        with open('playlist.txt','w') as f:
-            f.write(self.driver.page_source)
-            f.close()
             
         # 这里进行正则匹配，得到视频播放列表
         #     
@@ -133,6 +127,32 @@ class Hunst(object):
             except TimeoutException:
                 pass
                 
+            ##如果视频播放完毕，切换下一个，先要判断当前视频是否播放结束
+            # 爬取播放列表
+            with open('playlist.txt','w') as f:
+                f.write(self.driver.page_source)
+                f.close()
+         
+            #这里代码在视频生命周期只执行一次
+            if flag:
+                current_id, next_id = get_play_list('playlist.txt')
+                current_id_xpath = '//*[@id="{0}"]'.format(int(current_id))
+                self.driver.find_element_by_xpath(current_id_xpath).click()
+                time.sleep(1)
+                flag = 0
+                continue
+            else:
+                now_id, later_id = get_play_list('playlist.txt')
+                if now_id == next_id:
+                    # 跳转到下一个视频
+                    try:
+                        now_id_xpath = '//*[@id="{0}"]'.format(int(now_id))
+                        time.sleep(1)
+                        flag = 1
+                        self.driver.find_element_by_xpath(now_id_xpath).click()
+                    except ElementNotVisibleException:
+                        os.system('python chuangyeba.py')
+                        self.driver.quit()
 
 def get_exam_list(filename):
     with open(filename, 'r') as f:
@@ -145,6 +165,28 @@ def get_exam_list(filename):
     for i, item in enumerate(examlists):
         item = item + str(i)
         yield '//*[@id="{0}"]'.format(item)
+        
+        
+def get_play_list(filename):
+
+    current_id = ''
+    next_id = ''
+    
+    with open(filename, 'r') as f:
+        sourcedata = f.read()
+        f.close()
+   
+    playcompile = re.compile('<a href="javascript:void\(0\)" id="(\d+)" title="(.*?)" canbelearn="(.*?)" currentknowledge="(\d)".*?>', re.S)
+    playlist    = re.findall(playcompile, sourcedata)
+
+    for item in playlist:
+        if item[2] == 'true':
+            current_id = item[0]
+        elif item[2] == 'false':
+            next_id = item[0]
+            break
+    
+    return current_id, next_id
 
 
 if __name__ == '__main__':

@@ -10,6 +10,7 @@ headers = {
     'Connection': 'keep-alive',
     'Content-Length': '27',
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+    # 如果cookie失效，请自行填写最新cookie,这里是嘉俊的cookie
     'Cookie': 'Hm_lvt_e3d5c180b9eb27e8dd46713b446fd944=1559533371,1559701410,1559787551,1559829778; JLXCKID=00eabfbf-be4d-4cb6-8a94-ebda0721a77b',
     'Host': 'hnust.hunbys.com',
     'Origin': 'http://hnust.hunbys.com',

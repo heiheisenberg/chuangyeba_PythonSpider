@@ -11,8 +11,9 @@
 	根据浏览器版本下载对应的webdriver,否则会运行异常
 	
 	3.开发环境
-	python3
+	python3				下载地址:https://www.python.org/getit/
 	window10 X64
+	chrome x64    		下载地址：https://www.google.cn/intl/zh-CN/chrome/
 	
 ## 2.关于验证码和登陆参数
 	这里使用了云打码来过图片验证，如果有自己的账号，可以填入
@@ -35,4 +36,3 @@
 ## 4.如何使用
 	设置好必要参数后，在当前文件下调用cmd
 	>python chuangyeba.py
-	
