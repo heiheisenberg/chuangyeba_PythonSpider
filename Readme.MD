@@ -20,14 +20,16 @@
 	
 ## 3.文件介绍
 	1.chuangyeba.py		## 主文件
-	2.yanzhengma.py		## 云打码平台接口文件，不需更改
-	3.setting.py		## 用户参数设置都在这里，必须自己设置好参数！！！！！
-	4.辅助文件是开发中的测试文档，并不参与 chuangyeba.py 的运行，是必要参考文件
+	2.chuangyeba_beta.py##测试版本，添加了最新的改动
+	3.yanzhengma.py		## 云打码平台接口文件，不需更改
+	4.setting.py		## 用户参数设置都在这里，必须自己设置好参数！！！！！
+	5.辅助文件是开发中的测试文档，并不参与 chuangyeba.py 的运行，是必要参考文件
 	
 	其他文件
 	1.playlist.html		## 经过渲染后传回来的源码，用于正则匹配
-	2.playitem.txt		## 经过初步正则匹配的到的视频列表
+	2.playitem.txt		## 经过初步正则匹配的视频列表
 	3.videoplay.py		## html5 视频控制测试，这里是用bilibli测试
+	4.exam.txt			## 包含了随堂测试的网页源码
 
 
 ## 4.如何使用

@@ -69,7 +69,7 @@
     <script type="text/javascript" src="http://hnust.hunbys.com/plugins/other/pdfobject.js"></script>
     <script type="text/javascript" src="http://hnust.hunbys.com/plugins/layer/layer.js"></script><link rel="stylesheet" href="http://hnust.hunbys.com/plugins/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss">
     <script type="text/javascript" src="http://hnust.hunbys.com/js/md5.js"></script>
-<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=433272"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"></head>
+<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=433271"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"></head>
 <body style=" background-color:#fff;" id="hostBody">
 <base href="http://hnust.hunbys.com:80/">
 <meta charset="UTF-8">
@@ -294,7 +294,7 @@
             
             <span id="countDown">
                 <a class="share" style="padding-left: 200px;">当前成绩：<span id="curScore">0.0</span>分</a>
-                <input id="beginTime" type="hidden" value="20190606093026">
+                <input id="beginTime" type="hidden" value="20190606083400">
             </span>
             <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
         </div>
@@ -308,7 +308,7 @@
                 		<a style="color: #666;" href="javascript:void(0);">上课之前</a></p>
                 	</li>
                     
-                        <li class="selected2 videoPlayingLi">
+                        <li class="selected2">
                             <p class="part ">
                                 <span>第1章 创业与人生</span><i class="bg"></i>
                             </p>
@@ -380,7 +380,7 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1" class="selected videoPlaying">
+                                    <li coursetype="1" class="selected">
                                         <p class="part01">
                                             <a href="javascript:void(0)" id="687969" title="创业不像想象的那样.知识讲解篇" canbelearn="true" currentknowledge="1" coursetype="1" class="  " onclick="LearnCourse.initVideo(6493,687969,1,event)">
                                                 <i class="bg"></i>1.3
@@ -4829,7 +4829,7 @@
         </div>
         <div class="content03-right" id="videoContent" style="display: block;">
             <div class="video">
-                <video onclick="LearnCourse.stop()" id="video" cataid="" width="816" height="456" preload="" controls="controls" controlslist="nodownload" src="http://hnvideo.hunbys.com/180614_5381_807_%E7%AC%AC3%E8%AE%B2%E5%88%9B%E4%B8%9A%E4%B8%8D%E5%83%8F%E6%83%B3%E8%B1%A1%E7%9A%84%E9%82%A3%E6%A0%B7.%E7%9F%A5%E8%AF%86%E8%AE%B2%E8%A7%A3%E7%AF%87.mp4?sign=acb5c6fb67f6ea368a12eed8d0bd43ff&amp;t=5cf87ac2&amp;schoolId=10534&amp;isValidate=1">
+                <video onclick="LearnCourse.stop()" id="video" cataid="" width="816" height="456" preload="" controls="controls" controlslist="nodownload" src="http://hnvideo.hunbys.com/180614_5381_807_%E7%AC%AC3%E8%AE%B2%E5%88%9B%E4%B8%9A%E4%B8%8D%E5%83%8F%E6%83%B3%E8%B1%A1%E7%9A%84%E9%82%A3%E6%A0%B7.%E7%9F%A5%E8%AF%86%E8%AE%B2%E8%A7%A3%E7%AF%87.mp4?sign=47d66b56f15805b6d588976115628022&amp;t=5cf86d88&amp;schoolId=10534&amp;isValidate=1">
                     <source id="videoSource" src="" type="video/mp4;">
                 </video>
                 <p id="teachingResource" class="clearfix"><a data="/openresources/before/2018/04/d675150c64e939aaa93bbc3f8048d578.pdf" download="" class="black999 down"><i class="bg"></i>教辅资料下载</a><a href="javascript:LearnCourse.nextCate(687969)" class="black999 pull-right">下一个</a></p>
@@ -5417,4 +5417,4 @@ $(".checkboxCli").live('click',function(){
 </script>
 
 
-<div class="r-fixed" style="bottom: 300px;"><span>在线客服</span>                <div class="item0"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank"></a></div>                <div class="item1">                    <div class="info">                        <img src="/openresources/app_download_qr_code/image/2018/09/a9bb93efcfc292d16e0aa496303e96cf_c.png">                        <span style="width:80px; color:#999999; margin-top: 5px; margin-bottom:-20px;">App下载</span>                    </div>                </div>                <div class="item2"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank" style="height:100%;width: 100%;display: block;"></a></div></div></body></html>
+<div class="r-fixed" style="bottom: 300px;"><span>在线客服</span>                <div class="item0"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank"></a></div>                <div class="item1">                    <div class="info">                        <img src="/openresources/app_download_qr_code/image/2018/09/a9bb93efcfc292d16e0aa496303e96cf_c.png">                        <span style="width:80px; color:#999999; margin-top: 5px; margin-bottom:-20px;">App下载</span>                    </div>                </div>                <div class="item2"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank" style="height:100%;width: 100%;display: block;"></a></div></div><div class="layui-layer-shade" id="layui-layer-shade100001" times="100001" style="z-index:100001; background-color:#000; opacity:0.5; filter:alpha(opacity=50);"></div><div class="layui-layer layui-layer-page  layer-anim" id="layui-layer100001" type="page" times="100001" showtime="0" contype="string" style="z-index: 100002; width: 600px; height: 400px; top: 150px; left: 465px;"><div class="layui-layer-title" style="cursor: move;">随堂测试</div><div id="doclasswork" class="layui-layer-content" style="height: 299px;"> <div style="top: 10px;position: absolute;padding: 20px 40px;" id="homeWorkTemp">  <p>  <label>1. </label>  <lable>  （单选）  </lable> <label>杭州女大学生制衣店受欢迎的原因包括（）</label> </p> <p class="options" cwid="1151309" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151309" id="A0" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A0" style="margin-right: 20px;cursor: pointer;">专为女性设计</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151309" id="B0" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B0" style="margin-right: 20px;cursor: pointer;">价格不菲</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151309" id="C0" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C0" style="margin-right: 20px;cursor: pointer;">款式与人相配</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151309" id="D0" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D0" style="margin-right: 20px;cursor: pointer;">以上三项都对</label><br> </span>      </p> <p class="answer">答案：[C]</p>  <p>  <label>2. </label>  <lable>  （单选）  </lable> <label>案例中的女大学生来自（）</label> </p> <p class="options" cwid="1151310" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151310" id="A1" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A1" style="margin-right: 20px;cursor: pointer;">北京</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151310" id="B1" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B1" style="margin-right: 20px;cursor: pointer;">上海</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151310" id="C1" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C1" style="margin-right: 20px;cursor: pointer;">长沙</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151310" id="D1" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D1" style="margin-right: 20px;cursor: pointer;">杭州</label><br> </span>      </p> <p class="answer">答案：[D]</p>  <p>  <label>3. </label>  <lable>  （单选）  </lable> <label>案例中制衣店的衣服是（）</label> </p> <p class="options" cwid="1151311" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151311" id="A2" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A2" style="margin-right: 20px;cursor: pointer;">采购的</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151311" id="B2" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B2" style="margin-right: 20px;cursor: pointer;">二手的</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151311" id="C2" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C2" style="margin-right: 20px;cursor: pointer;">回收的</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151311" id="D2" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D2" style="margin-right: 20px;cursor: pointer;">DIY的</label><br> </span>      </p> <p class="answer">答案：[D]</p>  </div> </div><span class="layui-layer-setwin"></span><div class="layui-layer-btn layui-layer-btn-c"><a class="layui-layer-btn0">提交</a></div><span class="layui-layer-resize"></span></div><div class="layui-layer-move"></div></body></html>

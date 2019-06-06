@@ -1,5 +1,6 @@
 import re,time
 import os
+import json
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
@@ -71,9 +72,24 @@ class Hunst(object):
         self.driver.find_element_by_xpath('//*[@id="username"]').send_keys(login_number)
         self.driver.find_element_by_xpath('//*[@id="password"]').send_keys(login_password)
         self.driver.find_element_by_xpath('//*[@id="login_btn"]').click()
+        time.sleep(1)
         
         # 现在开始进入刷课环节，先会弹出签到表
         # 在这里签到完成
+        str = time.ctime(time.time())
+        str = str[0:10] + ' 00:00:00 CST 2019'
+        if str[8] == ' ':
+            str = str[0:8] + '0' + str[9:]
+        qiandao = '//*[@id="{0}"]/p[2]/i'.format(str)
+        try:
+            # 如果出现了签到表，进行签到
+            WebDriverWait(self.driver, 5, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="hasnotSign"]')))
+            self.driver.find_element_by_xpath(qiandao).click()
+            time.sleep(2)
+        except TimeoutException:
+            # 超时时表示今天签到完成
+            pass
+        
         
         # 进入学习
         WebDriverWait(self.driver, 10, 0.5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="inProgressCourseData"]/div/div[2]/p[2]/span/a')))
@@ -89,24 +105,66 @@ class Hunst(object):
         # 爬取播放列表
         with open('playlist.txt','w') as f:
             f.write(self.driver.page_source)
-        
+            f.close()
+            
+        # 这里进行正则匹配，得到视频播放列表
+            
         while True:
             try:
-                ceshi_element = WebDriverWait(self.driver, 10, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//div[@class="layui-layer-title"]')))
+                WebDriverWait(self.driver, 10, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//div[@class="layui-layer-title"]')))
                 print('题目弹出...')
-                # 在这里插入做题代码
+                # 保存当前页面，提取原题与答案
+                with open('exam.txt', 'w') as f:
+                    f.write(self.driver.page_source)
+                    f.close()
+                
+                # 主体
+                try:
+                    # 这里仅考虑单选题，三个题目
+                    daan1 = self.driver.find_element_by_xpath('//*[@id="homeWorkTemp"]/p[3]').text
+                    daan1 = daan1[4] + '1'
+                    daan1_x = '//*[@id="{0}"]'.format(daan1)
+                    self.driver.find_element_by_xpath('daan1_x').click()
+                    time.sleep(1)
+                except Exception as e:
+                    print(e)
+                    pass
+                    
+                try:
+                    daan2 = self.driver.find_element_by_xpath('//*[@id="homeWorkTemp"]/p[6]').text
+                    daan2 = daan2[4] + '2'
+                    daan2_x = '//*[@id="{0}"]'.format(daan2)
+                    self.driver.find_element_by_xpath('daan2_x').click()
+                    time.sleep(1)
+                except Exception as e:
+                    print(e)
+                    pass
+                    
+                try:
+                    daan3 = self.driver.find_element_by_xpath('//*[@id="homeWorkTemp"]/p[9]').text
+                    daan3 = daan3[4] + '3'
+                    daan3_x = '//*[@id="{0}"]'.format(daan3)
+                    self.driver.find_element_by_xpath('daan3_x').click()
+                    time.sleep(1)
+                except Exception as e:
+                    print(e)
+                    pass
+                    
+                # 当一切都没问题时，提交答案
                 print('做题完毕')
                 self.driver.find_element_by_xpath('//*[@class="layui-layer-btn0"]').click()
-                time.sleep(2)       
+                time.sleep(2)   
+                
+                ##如果视频播放完毕，切换下一个 
             except TimeoutException:
                 pass
                 
-            ##如果视频播放完毕，切换下一个
-        
-    def quit(self):
-        self.driver.quit()
+                       
+            
 
 
 if __name__ == '__main__':
     hnust = Hunst()
     hnust.visit_index()
+        
+        

@@ -1,8 +1,8 @@
 import re
 import json
 
-def get_play_list():
-    with open('playlist.txt', 'r') as f:
+def get_play_list(filename):
+    with open(filename, 'r') as f:
         sourcedata = f.read()
         f.close()
    
@@ -18,14 +18,14 @@ def get_play_list():
         }
         
         
-def write_to_file(content):
-	with open('playitem.txt','a',encoding = 'utf-8') as f:
+def write_to_file(filename, content):
+	with open(filename,'a',encoding = 'utf-8') as f:
 		f.write(json.dumps(content,ensure_ascii=False)+'\n')
 		f.close()
         
 def main():
-    for item in get_play_list():
-        write_to_file(item)
+    for item in get_play_list('playlist.txt'):
+        write_to_file('playitem.txt',item)
     
     
 if __name__ == '__main__':

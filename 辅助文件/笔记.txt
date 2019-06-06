@@ -1,11 +1,35 @@
-//*[@id="signTable"]
+http://hnust.hunbys.com/web/tologin
 # 签到表
+//div[@class="sign-table"]/div[1]
+/html/body/table[1]/tbody/tr/td/div
+//*[@id="hasnotSign"]
+# 签到日期
 //*[@id="Wed Jun 05 00:00:00 CST 2019"]/p[2]/i
-close bg right
+
+## 验证失败
+//*[@id="errMsg"]
+//*[@id="errMsg"]
+
 ## 开始学习
+//*[@id="inProgressCourseData"]/div/div[2]/p[2]/span/a
 //*[@id="inProgressCourseData"]/div/div[2]/p[2]/span/a
 ## 视屏
 //*[@id="video"]
+
+# 习题选项
+//*[@id="A0"]
+//*[@id="A1"]
+//*[@id="B1"]
+//*[@id="C1"]
+//*[@id="D1"]
+//*[@id="A2"]
+
+# 答案
+str = '答案：[C]'
+str[4]  ##中间：是中文冒号   
+//*[@id="homeWorkTemp"]/p[3]
+//*[@id="homeWorkTemp"]/p[6]
+//*[@id="homeWorkTemp"]/p[9]
 
 # 提交
 //*[@class="layui-layer-btn0"]

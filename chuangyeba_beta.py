@@ -1,6 +1,5 @@
 import re,time
 import os
-import json
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
@@ -108,7 +107,7 @@ class Hunst(object):
             f.close()
             
         # 这里进行正则匹配，得到视频播放列表
-            
+        #     
         while True:
             try:
                 WebDriverWait(self.driver, 10, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//div[@class="layui-layer-title"]')))
@@ -117,15 +116,35 @@ class Hunst(object):
                 with open('exam.txt', 'w') as f:
                     f.write(self.driver.page_source)
                     f.close()
-                # 在这里插入做题代码
+
+                for item in get_exam_list('exam.txt'):
+                    try:
+                        self.driver.find_element_by_xpath(item).click()
+                        time.sleep(1)
+                    except Exception as e:
+                        print(e)
+                        pass
+
+                # 当一切都没问题时，提交答案
                 print('做题完毕')
                 self.driver.find_element_by_xpath('//*[@class="layui-layer-btn0"]').click()
-                time.sleep(2)       
+                time.sleep(2)   
+                ##如果视频播放完毕，切换下一个 
             except TimeoutException:
                 pass
                 
-            ##如果视频播放完毕，切换下一个            
-            
+
+def get_exam_list(filename):
+    with open(filename, 'r') as f:
+        examdata = f.read()
+        f.close()
+        
+    examcompile = re.compile('<p class="answer">答案：\[(\w)\]</p>', re.S)
+    examlists   = re.findall(examcompile, examdata)
+    
+    for i, item in enumerate(examlists):
+        item = item + str(i)
+        yield '//*[@id="{0}"]'.format(item)
 
 
 if __name__ == '__main__':
