@@ -69,7 +69,7 @@
     <script type="text/javascript" src="http://hnust.hunbys.com/plugins/other/pdfobject.js"></script>
     <script type="text/javascript" src="http://hnust.hunbys.com/plugins/layer/layer.js"></script><link rel="stylesheet" href="http://hnust.hunbys.com/plugins/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss">
     <script type="text/javascript" src="http://hnust.hunbys.com/js/md5.js"></script>
-<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=433280"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"></head>
+<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=433286"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"></head>
 <body style=" background-color:#fff;" id="hostBody">
 <base href="http://hnust.hunbys.com:80/">
 <meta charset="UTF-8">
@@ -294,7 +294,7 @@
             
             <span id="countDown">
                 <a class="share" style="padding-left: 200px;">当前成绩：<span id="curScore">0.0</span>分</a>
-                <input id="beginTime" type="hidden" value="20190606170508">
+                <input id="beginTime" type="hidden" value="20190606232332">
             </span>
             <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
         </div>
@@ -623,15 +623,15 @@
                             </ul>
                         </li>
                     
-                        <li class="">
+                        <li class="selected2 videoPlayingLi">
                             <p class="part ">
                                 <span>第2章 创业者与创业团队</span><i class="bg"></i>
                             </p>
                             <ul class="partul" index="2" style="display: block">
                                 
-                                    <li coursetype="1" class="">
+                                    <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687977" title="创业者的定义及类型" canbelearn="true" currentknowledge="1" coursetype="1" class="  " onclick="LearnCourse.initVideo(6493,687977,1,event)">
+                                            <a href="javascript:void(0)" id="687977" title="创业者的定义及类型" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687977,1,event)">
                                                 <i class="bg"></i>2.1
                                                  
 												    
@@ -648,7 +648,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/3161d9365389f4627b61213db867f36c.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="display: none;">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -662,9 +662,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1">
+                                    <li coursetype="1" class="selected videoPlaying">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687978" title="创业者的素质与能力特征" canbelearn="false" currentknowledge="0" coursetype="1" class="  black999" onclick="LearnCourse.initVideo(6493,687978,1,event)">
+                                            <a href="javascript:void(0)" id="687978" title="创业者的素质与能力特征" canbelearn="true" currentknowledge="1" coursetype="1" class="  " onclick="LearnCourse.initVideo(6493,687978,1,event)">
                                                 <i class="bg"></i>2.2
                                                  
 												    
@@ -681,7 +681,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/65ee2e71089bfd964503167513dbd75e.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="">
+                                        <div class="show" style="display: block;">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -4829,10 +4829,10 @@
         </div>
         <div class="content03-right" id="videoContent" style="display: block;">
             <div class="video">
-                <video onclick="LearnCourse.stop()" id="video" cataid="" width="816" height="456" preload="" controls="controls" controlslist="nodownload" src="http://hnvideo.hunbys.com/180614_5381_807_%E7%AC%AC1%E8%AE%B2%E5%88%9B%E4%B8%9A%E8%80%85%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E7%B1%BB%E5%9E%8B.mp4?sign=9b74bd8486df24b40055f0559d187864&amp;t=5cf8e554&amp;schoolId=10534&amp;isValidate=1">
+                <video onclick="LearnCourse.stop()" id="video" cataid="" width="816" height="456" preload="" controls="controls" controlslist="nodownload" src="http://hnvideo.hunbys.com/180614_5381_807_%E7%AC%AC2%E8%AE%B2%E5%88%9B%E4%B8%9A%E8%80%85%E7%9A%84%E7%B4%A0%E8%B4%A8%E4%B8%8E%E8%83%BD%E5%8A%9B%E7%89%B9%E5%BE%81.mp4?sign=d56861a188f703d234f22c80d94f3d93&amp;t=5cf93e05&amp;schoolId=10534&amp;isValidate=1">
                     <source id="videoSource" src="" type="video/mp4;">
                 </video>
-                <p id="teachingResource" class="clearfix"><a href="javascript:LearnCourse.nextCate(687977)" class="black999 pull-right">下一个</a></p>
+                <p id="teachingResource" class="clearfix"><a data="/openresources/before/2018/04/65ee2e71089bfd964503167513dbd75e.pdf" download="" class="black999 down"><i class="bg"></i>教辅资料下载</a><a href="javascript:LearnCourse.nextCate(687978)" class="black999 pull-right">下一个</a></p>
             </div>
             <div class="tab-cnt">
                 <div class="tab-nav">
@@ -4858,7 +4858,7 @@
 
 
 	<input type="hidden" name="courseId" value="6493">
-	<input type="hidden" name="cataId" value="687977">
+	<input type="hidden" name="cataId" value="687978">
 	<!--输入框-->
    <div class="textarea">
        <p><textarea id="content"></textarea><div id="info-content" class="textarea-limit" style="float:right;">还可以输入<b>500</b>字</div></p>
@@ -4993,7 +4993,7 @@
 				<!--index-box-->
 				<div class="index-box">
 					<!--常见问题-->
-					<ul class="common-problem" style="max-height: 511px;">
+					<ul class="common-problem" style="max-height: 462px;">
 						<p><img src="http://hnust.hunbys.com/image/loading.gif">加载中，请稍后……</p>
 					</ul>
 					<!--常见问题 end-->
@@ -5048,7 +5048,7 @@
 				<!--index-box-->
 				<div class="index-box">
 					<!--法律条款-->
-					<ul class="legal-provisions" style="max-height: 511px;">
+					<ul class="legal-provisions" style="max-height: 462px;">
 						<li class="clauseli">
 							<p><img src="http://hnust.hunbys.com/image/loading.gif">加载中，请稍后……</p>
 						</li>
@@ -5073,7 +5073,7 @@
 				<!--index-box-->
 				<div class="index-box">
 					<!--联系我们-->
-					<ul class="legal-provisions" style="max-height: 511px;">
+					<ul class="legal-provisions" style="max-height: 462px;">
 						<li class="contactli">
 							<p><img src="http://hnust.hunbys.com/image/loading.gif">加载中，请稍后……</p>
 						</li>
@@ -5097,7 +5097,7 @@
 				<!--index-box-->
 					<div class="index-box">
 						<!--升级日志-->
-						<ul class="common-problem" style="max-height: 511px;">
+						<ul class="common-problem" style="max-height: 462px;">
 						<p><img src="http://hnust.hunbys.com/image/loading.gif">加载中，请稍后……</p>
 					</ul>
 						<!--升级日志 end-->
@@ -5417,4 +5417,4 @@ $(".checkboxCli").live('click',function(){
 </script>
 
 
-<div class="r-fixed" style="bottom: 300px;"><span>在线客服</span>                <div class="item0"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank"></a></div>                <div class="item1">                    <div class="info">                        <img src="/openresources/app_download_qr_code/image/2018/09/a9bb93efcfc292d16e0aa496303e96cf_c.png">                        <span style="width:80px; color:#999999; margin-top: 5px; margin-bottom:-20px;">App下载</span>                    </div>                </div>                <div class="item2"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank" style="height:100%;width: 100%;display: block;"></a></div></div><div class="layui-layer-move"></div></body></html>
+<div class="r-fixed" style="bottom: 300px;"><span>在线客服</span>                <div class="item0"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank"></a></div>                <div class="item1">                    <div class="info">                        <img src="/openresources/app_download_qr_code/image/2018/09/a9bb93efcfc292d16e0aa496303e96cf_c.png">                        <span style="width:80px; color:#999999; margin-top: 5px; margin-bottom:-20px;">App下载</span>                    </div>                </div>                <div class="item2"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank" style="height:100%;width: 100%;display: block;"></a></div></div></body></html>

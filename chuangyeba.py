@@ -101,7 +101,10 @@ class Hunst(object):
         self.driver.execute_script("return arguments[0].play()",video_element)  # 开始播放
             
         # 这里进行正则匹配，得到视频播放列表
-        #     
+        #  
+        flag = 1
+        current_id = 0
+        next_id = 0        
         while True:
             try:
                 WebDriverWait(self.driver, 10, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//div[@class="layui-layer-title"]')))

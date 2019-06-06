@@ -69,7 +69,7 @@
     <script type="text/javascript" src="http://hnust.hunbys.com/plugins/other/pdfobject.js"></script>
     <script type="text/javascript" src="http://hnust.hunbys.com/plugins/layer/layer.js"></script><link rel="stylesheet" href="http://hnust.hunbys.com/plugins/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss">
     <script type="text/javascript" src="http://hnust.hunbys.com/js/md5.js"></script>
-<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=433280"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"></head>
+<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=433286"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"></head>
 <body style=" background-color:#fff;" id="hostBody">
 <base href="http://hnust.hunbys.com:80/">
 <meta charset="UTF-8">
@@ -267,7 +267,7 @@
 <input type="hidden" id="beforeFilePath" value="">
 <input type="hidden" id="videoplay" value="obo">
 <input type="hidden" id="frequency" value="30">
-<input type="hidden" id="courseHasStartLearn" value="true">
+<input type="hidden" id="courseHasStartLearn" value="false">
 <input type="hidden" id="moocFreeTime" value="">
 <input type="hidden" id="zsTotalHour" value="{&quot;688050&quot;:0,&quot;688052&quot;:0,&quot;688051&quot;:0,&quot;688058&quot;:0,&quot;688057&quot;:0,&quot;688059&quot;:0,&quot;688054&quot;:0,&quot;688053&quot;:0,&quot;688056&quot;:0,&quot;687999&quot;:0,&quot;687995&quot;:0,&quot;687996&quot;:0,&quot;687997&quot;:0,&quot;687998&quot;:0,&quot;688061&quot;:0,&quot;688060&quot;:0,&quot;688063&quot;:0,&quot;688062&quot;:0,&quot;688069&quot;:0,&quot;688102&quot;:0,&quot;688068&quot;:0,&quot;688101&quot;:0,&quot;688104&quot;:0,&quot;688103&quot;:0,&quot;688065&quot;:0,&quot;688064&quot;:0,&quot;688067&quot;:0,&quot;688100&quot;:0,&quot;688066&quot;:0,&quot;688030&quot;:0,&quot;687980&quot;:0,&quot;688036&quot;:0,&quot;687981&quot;:0,&quot;687982&quot;:0,&quot;688038&quot;:0,&quot;687983&quot;:0,&quot;688037&quot;:0,&quot;688032&quot;:0,&quot;688031&quot;:0,&quot;688034&quot;:0,&quot;688033&quot;:0,&quot;687977&quot;:0,&quot;687978&quot;:0,&quot;687979&quot;:0,&quot;687973&quot;:0,&quot;688029&quot;:0,&quot;687974&quot;:0,&quot;688028&quot;:0,&quot;687975&quot;:0,&quot;688041&quot;:0,&quot;688040&quot;:0,&quot;687991&quot;:0,&quot;688047&quot;:0,&quot;687992&quot;:0,&quot;688046&quot;:0,&quot;687993&quot;:0,&quot;688049&quot;:0,&quot;687994&quot;:0,&quot;688048&quot;:0,&quot;688043&quot;:0,&quot;688042&quot;:0,&quot;688045&quot;:0,&quot;687990&quot;:0,&quot;688044&quot;:0,&quot;687988&quot;:0,&quot;687989&quot;:0,&quot;687984&quot;:0,&quot;687985&quot;:0,&quot;688039&quot;:0,&quot;687986&quot;:0,&quot;687987&quot;:0,&quot;688094&quot;:0,&quot;688093&quot;:0,&quot;688096&quot;:0,&quot;688095&quot;:0,&quot;688090&quot;:0,&quot;688092&quot;:0,&quot;688091&quot;:0,&quot;688014&quot;:0,&quot;688013&quot;:0,&quot;688016&quot;:0,&quot;688015&quot;:0,&quot;688010&quot;:0,&quot;688098&quot;:0,&quot;688012&quot;:0,&quot;688011&quot;:0,&quot;688099&quot;:0,&quot;688007&quot;:0,&quot;688006&quot;:0,&quot;688009&quot;:0,&quot;688008&quot;:0,&quot;688025&quot;:0,&quot;687970&quot;:0,&quot;688024&quot;:0,&quot;687971&quot;:0,&quot;688027&quot;:0,&quot;687972&quot;:0,&quot;688026&quot;:0,&quot;688021&quot;:0,&quot;688020&quot;:0,&quot;688023&quot;:0,&quot;688022&quot;:0,&quot;687967&quot;:0,&quot;687968&quot;:0,&quot;687969&quot;:0,&quot;688017&quot;:0,&quot;688019&quot;:0,&quot;688072&quot;:0,&quot;688071&quot;:0,&quot;688074&quot;:0,&quot;688073&quot;:0,&quot;688070&quot;:0,&quot;688079&quot;:0,&quot;688076&quot;:0,&quot;688075&quot;:0,&quot;688078&quot;:0,&quot;688077&quot;:0,&quot;688105&quot;:0,&quot;688083&quot;:0,&quot;688082&quot;:0,&quot;688085&quot;:0,&quot;688084&quot;:0,&quot;688081&quot;:0,&quot;688080&quot;:0,&quot;688003&quot;:0,&quot;688002&quot;:0,&quot;688005&quot;:0,&quot;688004&quot;:0,&quot;688087&quot;:0,&quot;688001&quot;:0,&quot;688089&quot;:0,&quot;688088&quot;:0}">
 <input type="hidden" id="modeltype" value="SPOC">
@@ -294,7 +294,7 @@
             
             <span id="countDown">
                 <a class="share" style="padding-left: 200px;">当前成绩：<span id="curScore">0.0</span>分</a>
-                <input id="beginTime" type="hidden" value="20190606170508">
+                <input id="beginTime" type="hidden" value="20190606232047">
             </span>
             <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
         </div>
@@ -623,15 +623,15 @@
                             </ul>
                         </li>
                     
-                        <li class="">
+                        <li class="selected2">
                             <p class="part ">
                                 <span>第2章 创业者与创业团队</span><i class="bg"></i>
                             </p>
                             <ul class="partul" index="2" style="display: block">
                                 
-                                    <li coursetype="1" class="">
+                                    <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687977" title="创业者的定义及类型" canbelearn="true" currentknowledge="1" coursetype="1" class="  " onclick="LearnCourse.initVideo(6493,687977,1,event)">
+                                            <a href="javascript:void(0)" id="687977" title="创业者的定义及类型" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687977,1,event)">
                                                 <i class="bg"></i>2.1
                                                  
 												    
@@ -648,7 +648,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/3161d9365389f4627b61213db867f36c.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="display: none;">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -662,9 +662,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1">
+                                    <li coursetype="1" class="selected">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687978" title="创业者的素质与能力特征" canbelearn="false" currentknowledge="0" coursetype="1" class="  black999" onclick="LearnCourse.initVideo(6493,687978,1,event)">
+                                            <a href="javascript:void(0)" id="687978" title="创业者的素质与能力特征" canbelearn="true" currentknowledge="1" coursetype="1" class="  " onclick="LearnCourse.initVideo(6493,687978,1,event)">
                                                 <i class="bg"></i>2.2
                                                  
 												    
@@ -681,7 +681,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/65ee2e71089bfd964503167513dbd75e.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="">
+                                        <div class="show" style="display: block;">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -4829,10 +4829,10 @@
         </div>
         <div class="content03-right" id="videoContent" style="display: block;">
             <div class="video">
-                <video onclick="LearnCourse.stop()" id="video" cataid="" width="816" height="456" preload="" controls="controls" controlslist="nodownload" src="http://hnvideo.hunbys.com/180614_5381_807_%E7%AC%AC1%E8%AE%B2%E5%88%9B%E4%B8%9A%E8%80%85%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E7%B1%BB%E5%9E%8B.mp4?sign=9b74bd8486df24b40055f0559d187864&amp;t=5cf8e554&amp;schoolId=10534&amp;isValidate=1">
+                <video onclick="LearnCourse.stop()" id="video" cataid="" width="816" height="456" preload="" controls="controls" controlslist="nodownload" src="http://hnvideo.hunbys.com/180614_5381_807_%E7%AC%AC2%E8%AE%B2%E5%88%9B%E4%B8%9A%E8%80%85%E7%9A%84%E7%B4%A0%E8%B4%A8%E4%B8%8E%E8%83%BD%E5%8A%9B%E7%89%B9%E5%BE%81.mp4?sign=73a1034405d0b9e62f7a7909e54071ea&amp;t=5cf93d5f&amp;schoolId=10534&amp;isValidate=1">
                     <source id="videoSource" src="" type="video/mp4;">
                 </video>
-                <p id="teachingResource" class="clearfix"><a href="javascript:LearnCourse.nextCate(687977)" class="black999 pull-right">下一个</a></p>
+                <p id="teachingResource" class="clearfix"><a data="/openresources/before/2018/04/65ee2e71089bfd964503167513dbd75e.pdf" download="" class="black999 down"><i class="bg"></i>教辅资料下载</a><a href="javascript:LearnCourse.nextCate(687978)" class="black999 pull-right">下一个</a></p>
             </div>
             <div class="tab-cnt">
                 <div class="tab-nav">
@@ -4858,7 +4858,7 @@
 
 
 	<input type="hidden" name="courseId" value="6493">
-	<input type="hidden" name="cataId" value="687977">
+	<input type="hidden" name="cataId" value="687978">
 	<!--输入框-->
    <div class="textarea">
        <p><textarea id="content"></textarea><div id="info-content" class="textarea-limit" style="float:right;">还可以输入<b>500</b>字</div></p>
@@ -4993,7 +4993,7 @@
 				<!--index-box-->
 				<div class="index-box">
 					<!--常见问题-->
-					<ul class="common-problem" style="max-height: 511px;">
+					<ul class="common-problem" style="max-height: 462px;">
 						<p><img src="http://hnust.hunbys.com/image/loading.gif">加载中，请稍后……</p>
 					</ul>
 					<!--常见问题 end-->
@@ -5048,7 +5048,7 @@
 				<!--index-box-->
 				<div class="index-box">
 					<!--法律条款-->
-					<ul class="legal-provisions" style="max-height: 511px;">
+					<ul class="legal-provisions" style="max-height: 462px;">
 						<li class="clauseli">
 							<p><img src="http://hnust.hunbys.com/image/loading.gif">加载中，请稍后……</p>
 						</li>
@@ -5073,7 +5073,7 @@
 				<!--index-box-->
 				<div class="index-box">
 					<!--联系我们-->
-					<ul class="legal-provisions" style="max-height: 511px;">
+					<ul class="legal-provisions" style="max-height: 462px;">
 						<li class="contactli">
 							<p><img src="http://hnust.hunbys.com/image/loading.gif">加载中，请稍后……</p>
 						</li>
@@ -5097,7 +5097,7 @@
 				<!--index-box-->
 					<div class="index-box">
 						<!--升级日志-->
-						<ul class="common-problem" style="max-height: 511px;">
+						<ul class="common-problem" style="max-height: 462px;">
 						<p><img src="http://hnust.hunbys.com/image/loading.gif">加载中，请稍后……</p>
 					</ul>
 						<!--升级日志 end-->
@@ -5417,4 +5417,4 @@ $(".checkboxCli").live('click',function(){
 </script>
 
 
-<div class="r-fixed" style="bottom: 300px;"><span>在线客服</span>                <div class="item0"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank"></a></div>                <div class="item1">                    <div class="info">                        <img src="/openresources/app_download_qr_code/image/2018/09/a9bb93efcfc292d16e0aa496303e96cf_c.png">                        <span style="width:80px; color:#999999; margin-top: 5px; margin-bottom:-20px;">App下载</span>                    </div>                </div>                <div class="item2"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank" style="height:100%;width: 100%;display: block;"></a></div></div><div class="layui-layer-move"></div><div class="layui-layer-shade" id="layui-layer-shade100004" times="100004" style="z-index:100004; background-color:#000; opacity:0.5; filter:alpha(opacity=50);"></div><div class="layui-layer layui-layer-page  layer-anim" id="layui-layer100004" type="page" times="100004" showtime="0" contype="string" style="z-index: 100005; width: 600px; height: 400px; top: 150px; left: 465px;"><div class="layui-layer-title" style="cursor: move;">随堂测试</div><div id="doclasswork" class="layui-layer-content" style="height: 299px;"> <div style="top: 10px;position: absolute;padding: 20px 40px;" id="homeWorkTemp">  <p>  <label>1. </label>  <lable>  （单选）  </lable> <label>以下关于创业者的说法，正确的是（）</label> </p> <p class="options" cwid="1151346" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151346" id="A0" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A0" style="margin-right: 20px;cursor: pointer;">组织、管理一个生意或企业并承担其风险的人</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151346" id="B0" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B0" style="margin-right: 20px;cursor: pointer;">从事创造新事业的人</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151346" id="C0" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C0" style="margin-right: 20px;cursor: pointer;">从事开办新企业事业的人</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151346" id="D0" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D0" style="margin-right: 20px;cursor: pointer;">以上三项都对</label><br> </span>      </p> <p class="answer">答案：[D]</p>  <p>  <label>2. </label>  <lable>  （单选）  </lable> <label>以下关于创业者的说法，错误的是（）</label> </p> <p class="options" cwid="1151347" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151347" id="A1" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A1" style="margin-right: 20px;cursor: pointer;">创业者有广义与侠义之分</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151347" id="B1" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B1" style="margin-right: 20px;cursor: pointer;">创业者就是创办企业的人</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151347" id="C1" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C1" style="margin-right: 20px;cursor: pointer;">创业者包括从事创新事业的人</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151347" id="D1" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D1" style="margin-right: 20px;cursor: pointer;">参与创业活动的核心人员也是创业者</label><br> </span>      </p> <p class="answer">答案：[B]</p>  <p>  <label>3. </label>  <lable>  （单选）  </lable> <label>创业者是（）的人。</label> </p> <p class="options" cwid="1151348" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151348" id="A2" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A2" style="margin-right: 20px;cursor: pointer;">创办企业</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151348" id="B2" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B2" style="margin-right: 20px;cursor: pointer;">升官发财</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151348" id="C2" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C2" style="margin-right: 20px;cursor: pointer;">现实主义</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151348" id="D2" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D2" style="margin-right: 20px;cursor: pointer;">参与创业</label><br> </span>      </p> <p class="answer">答案：[D]</p>  </div> </div><span class="layui-layer-setwin"></span><div class="layui-layer-btn layui-layer-btn-c"><a class="layui-layer-btn0">提交</a></div><span class="layui-layer-resize"></span></div></body></html>
+<div class="r-fixed" style="bottom: 300px;"><span>在线客服</span>                <div class="item0"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank"></a></div>                <div class="item1">                    <div class="info">                        <img src="/openresources/app_download_qr_code/image/2018/09/a9bb93efcfc292d16e0aa496303e96cf_c.png">                        <span style="width:80px; color:#999999; margin-top: 5px; margin-bottom:-20px;">App下载</span>                    </div>                </div>                <div class="item2"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank" style="height:100%;width: 100%;display: block;"></a></div></div><div class="layui-layer-shade" id="layui-layer-shade100001" times="100001" style="z-index:100001; background-color:#000; opacity:0.5; filter:alpha(opacity=50);"></div><div class="layui-layer layui-layer-page  layer-anim" id="layui-layer100001" type="page" times="100001" showtime="0" contype="string" style="z-index: 100002; width: 600px; height: 400px; top: 150px; left: 465px;"><div class="layui-layer-title" style="cursor: move;">随堂测试</div><div id="doclasswork" class="layui-layer-content" style="height: 299px;"> <div style="top: 10px;position: absolute;padding: 20px 40px;" id="homeWorkTemp">  <p>  <label>1. </label>  <lable>  （单选）  </lable> <label>创业者各自给我们以不同的形象，所以（）</label> </p> <p class="options" cwid="1151350" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151350" id="A0" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A0" style="margin-right: 20px;cursor: pointer;">他们的素质与能力没有差别</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151350" id="B0" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B0" style="margin-right: 20px;cursor: pointer;">们的素质与能力差别很大</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151350" id="C0" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C0" style="margin-right: 20px;cursor: pointer;">无法对他们的素质与能力进行分析</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151350" id="D0" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D0" style="margin-right: 20px;cursor: pointer;">可以分析其共有的、大致的素质与能力</label><br> </span>      </p> <p class="answer">答案：[D]</p>  <p>  <label>2. </label>  <lable>  （单选）  </lable> <label>素质与能力这两个概念是（）</label> </p> <p class="options" cwid="1151351" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151351" id="A1" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A1" style="margin-right: 20px;cursor: pointer;">没有差别</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151351" id="B1" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B1" style="margin-right: 20px;cursor: pointer;">差别很大</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151351" id="C1" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C1" style="margin-right: 20px;cursor: pointer;">相伴相随</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151351" id="D1" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D1" style="margin-right: 20px;cursor: pointer;">不能共存</label><br> </span>      </p> <p class="answer">答案：[C]</p>  <p>  <label>3. </label>  <lable>  （单选）  </lable> <label>以下关于素质和能力的说法中，错误的是（）</label> </p> <p class="options" cwid="1151352" itemtype="1">      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151352" id="A2" value="A"></i> <label style="cursor: pointer;">A.</label> <label for="A2" style="margin-right: 20px;cursor: pointer;">素质与能力是可以截然分开进行分析的</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151352" id="B2" value="B"></i> <label style="cursor: pointer;">B.</label> <label for="B2" style="margin-right: 20px;cursor: pointer;">素质和能力与成功创业间有一定的关联性</label><br> </span>      <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151352" id="C2" value="C"></i> <label style="cursor: pointer;">C.</label> <label for="C2" style="margin-right: 20px;cursor: pointer;">素质是人天生的生理元素和思维元素的质量</label><br> </span>     <span class="radioCli" style="cursor: pointer;"> <i class="input radio bg" type="radio" name="1151352" id="D2" value="D"></i> <label style="cursor: pointer;">D.</label> <label for="D2" style="margin-right: 20px;cursor: pointer;">能力是完成一项目标或者任务所体现出来的素质</label><br> </span>      </p> <p class="answer">答案：[A]</p>  </div> </div><span class="layui-layer-setwin"></span><div class="layui-layer-btn layui-layer-btn-c"><a class="layui-layer-btn0">提交</a></div><span class="layui-layer-resize"></span></div><div class="layui-layer-move"></div></body></html>
