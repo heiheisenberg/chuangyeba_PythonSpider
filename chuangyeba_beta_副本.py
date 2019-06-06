@@ -2,7 +2,7 @@ import re,time
 import os
 #import json
 from selenium import webdriver
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException,ElementNotVisibleException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -135,10 +135,14 @@ class Hunst(object):
                 now_id, later_id = get_play_list('playlist.txt')
                 if now_id == next_id:
                     # 跳转到下一个视频
-                    now_id_xpath = '//*[@id="{0}"]'.format(int(now_id))
-                    self.driver.find_element_by_xpath(now_id_xpath).click()
-                    time.sleep(1)
-                    flag = 1
+                    try:
+                        now_id_xpath = '//*[@id="{0}"]'.format(int(now_id))
+                        time.sleep(1)
+                        flag = 1
+                        self.driver.find_element_by_xpath(now_id_xpath).click()
+                    except ElementNotVisibleException:
+                        os.system('python chuangyeba_beta_副本')
+                        self.driver.quit()
                 
 
                       
