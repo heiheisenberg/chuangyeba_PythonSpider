@@ -6,7 +6,7 @@ def get_play_list(filename):
         sourcedata = f.read()
         f.close()
    
-    playcompile = re.compile('<a href="javascript:void\(0\)" id="(\d+)" title="(.*?)".*?class="(.*?)".*?>', re.S)
+    playcompile = re.compile('<a href="javascript:void\(0\)" id="(\d+)" title="(.*?)" canbelearn="(.*?)".*?>', re.S)
     playlist    = re.findall(playcompile, sourcedata)
 
     for item in playlist:
@@ -14,7 +14,7 @@ def get_play_list(filename):
         yield{
             'id':item[0],
             'title':item[1],
-            'class':item[2].strip()
+            'canbelearn':item[2].strip()
         }
         
         

@@ -21,3 +21,7 @@ appkey = '22cc5376925e9387a23cf797cb9ba745'
 # 创业课登陆账号和密码
 login_number = '1608040112'
 login_password = 'abc123'
+
+# 测试版cookie登陆，这里cookie值请从浏览器复制到这
+HM_LVT = '1559530870,1559533371,1559701410,1559787551'
+JLXCKID = '25e1b01b-7a60-4e67-bcde-579ed7e7ebcc'

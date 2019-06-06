@@ -69,7 +69,7 @@
     <script type="text/javascript" src="http://hnust.hunbys.com/plugins/other/pdfobject.js"></script>
     <script type="text/javascript" src="http://hnust.hunbys.com/plugins/layer/layer.js"></script><link rel="stylesheet" href="http://hnust.hunbys.com/plugins/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss">
     <script type="text/javascript" src="http://hnust.hunbys.com/js/md5.js"></script>
-<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=433275"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"></head>
+<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=433278"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"></head>
 <body style=" background-color:#fff;" id="hostBody">
 <base href="http://hnust.hunbys.com:80/">
 <meta charset="UTF-8">
@@ -294,7 +294,7 @@
             
             <span id="countDown">
                 <a class="share" style="padding-left: 200px;">当前成绩：<span id="curScore">0.0</span>分</a>
-                <input id="beginTime" type="hidden" value="20190606125701">
+                <input id="beginTime" type="hidden" value="20190606155110">
             </span>
             <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
         </div>
@@ -312,7 +312,7 @@
                             <p class="part ">
                                 <span>第1章 创业与人生</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="1" style="display: block">
+                            <ul class="partul" index="1" style="display: block;">
                                 
                                     <li coursetype="1" class="selected2">
                                         <p class="part01">
@@ -415,7 +415,7 @@
                                 
                                     <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687970" title="创业不像想象的那样.实战篇(上)" canbelearn="true" currentknowledge="1" coursetype="1" class="videoFinish" onclick="LearnCourse.initVideo(6493,687970,1,event)">
+                                            <a href="javascript:void(0)" id="687970" title="创业不像想象的那样.实战篇(上)" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687970,1,event)">
                                                 <i class="bg"></i>1.4
                                                  
 												    
@@ -432,7 +432,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/70f09888969b8912c3a39ac2dfdf986c.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="display: block;">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：无</p>
                                                 <p>在线答疑：-</p>
@@ -446,9 +446,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1">
+                                    <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687971" title="创业不像想象的那样.实战篇(下)" canbelearn="true" currentknowledge="0" coursetype="1" class="" onclick="LearnCourse.initVideo(6493,687971,1,event)">
+                                            <a href="javascript:void(0)" id="687971" title="创业不像想象的那样.实战篇(下)" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687971,1,event)">
                                                 <i class="bg"></i>1.5
                                                  
 												    
@@ -479,9 +479,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1">
+                                    <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687972" title="拓展学习-学会从失败中学习.知识讲解篇" canbelearn="false" currentknowledge="0" coursetype="1" class="  black999" onclick="LearnCourse.initVideo(6493,687972,1,event)">
+                                            <a href="javascript:void(0)" id="687972" title="拓展学习-学会从失败中学习.知识讲解篇" canbelearn="true" currentknowledge="1" coursetype="1" class="videoFinish" onclick="LearnCourse.initVideo(6493,687972,1,event)">
                                                 <i class="bg"></i>1.6
                                                  
 												    
@@ -498,7 +498,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/a2b9e5355544ad487e7fd2bd34bfe1b8.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="">
+                                        <div class="show" style="display: none;">
                                             <div class="date">
                                                 <p>作业上交：无</p>
                                                 <p>在线答疑：-</p>
@@ -512,9 +512,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1">
+                                    <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687973" title="拓展学习-学会从失败中学习.实战篇(上)" canbelearn="false" currentknowledge="0" coursetype="1" class="  black999" onclick="LearnCourse.initVideo(6493,687973,1,event)">
+                                            <a href="javascript:void(0)" id="687973" title="拓展学习-学会从失败中学习.实战篇(上)" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish" onclick="LearnCourse.initVideo(6493,687973,1,event)">
                                                 <i class="bg"></i>1.7
                                                  
 												    
@@ -531,7 +531,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/bcdaf79b4bd025a52aa7bbc7c88bb672.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="">
+                                        <div class="show" style="display: none;">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -545,9 +545,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1">
+                                    <li coursetype="1" class="">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687974" title="拓展学习-学会从失败中学习.实战篇(中)" canbelearn="false" currentknowledge="0" coursetype="1" class="  black999" onclick="LearnCourse.initVideo(6493,687974,1,event)">
+                                            <a href="javascript:void(0)" id="687974" title="拓展学习-学会从失败中学习.实战篇(中)" canbelearn="true" currentknowledge="0" coursetype="1" class="" onclick="LearnCourse.initVideo(6493,687974,1,event)">
                                                 <i class="bg"></i>1.8
                                                  
 												    
@@ -564,7 +564,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/3207e91b80b476cd90d20742d97c9186.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="">
+                                        <div class="show" style="display: none;">
                                             <div class="date">
                                                 <p>作业上交：无</p>
                                                 <p>在线答疑：-</p>
@@ -627,7 +627,7 @@
                             <p class="part ">
                                 <span>第2章 创业者与创业团队</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="2" style="display: none">
+                            <ul class="partul" index="2" style="display: none;">
                                 
                                     <li coursetype="1">
                                         <p class="part01">
@@ -1404,7 +1404,7 @@
                             <p class="part ">
                                 <span>第3章 创业机会及其识别与评价</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="3" style="display: none">
+                            <ul class="partul" index="3" style="display: none;">
                                 
                                     <li coursetype="1">
                                         <p class="part01">
@@ -1983,7 +1983,7 @@
                             <p class="part ">
                                 <span>第4章 创业风险及识别与管理</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="4" style="display: none">
+                            <ul class="partul" index="4" style="display: none;">
                                 
                                     <li coursetype="1">
                                         <p class="part01">
@@ -2529,7 +2529,7 @@
                             <p class="part ">
                                 <span>第5章 商业模式及其设计与创新</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="5" style="display: none">
+                            <ul class="partul" index="5" style="display: none;">
                                 
                                     <li coursetype="1">
                                         <p class="part01">
@@ -3174,7 +3174,7 @@
                             <p class="part ">
                                 <span>第6章 创业资源及其管理</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="6" style="display: none">
+                            <ul class="partul" index="6" style="display: none;">
                                 
                                     <li coursetype="1">
                                         <p class="part01">
@@ -4182,7 +4182,7 @@
                             <p class="part ">
                                 <span>第7章 创业计划</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="7" style="display: none">
+                            <ul class="partul" index="7" style="display: none;">
                                 
                                     <li coursetype="1">
                                         <p class="part01">
@@ -4530,7 +4530,7 @@
                             <p class="part ">
                                 <span>第8章 新企业的创办与管理</span><i class="bg"></i>
                             </p>
-                            <ul class="partul" index="8" style="display: none">
+                            <ul class="partul" index="8" style="display: none;">
                                 
                                     <li coursetype="1">
                                         <p class="part01">
@@ -4812,7 +4812,7 @@
                         <p class="part exam">
                             <span class="examMenu">考试</span><i class="bg"></i>
                         </p>
-                        <ul>
+                        <ul style="">
                             
                         </ul>
                     </li>
@@ -4829,10 +4829,10 @@
         </div>
         <div class="content03-right" id="videoContent" style="display: block;">
             <div class="video">
-                <video onclick="LearnCourse.stop()" id="video" cataid="" width="816" height="456" preload="" controls="controls" controlslist="nodownload" src="http://hnvideo.hunbys.com/180614_5381_807_%E7%AC%AC4%E8%AE%B2%E5%88%9B%E4%B8%9A%E4%B8%8D%E5%83%8F%E6%83%B3%E8%B1%A1%E7%9A%84%E9%82%A3%E6%A0%B7.%E5%AE%9E%E6%88%98%E7%AF%87%EF%BC%88%E4%B8%8A%EF%BC%89.mp4?sign=05822c3583223a8bd344c44b9d274d1a&amp;t=5cf8ab2d&amp;schoolId=10534&amp;isValidate=1">
+                <video onclick="LearnCourse.stop()" id="video" cataid="" width="816" height="456" preload="" controls="controls" controlslist="nodownload" src="http://hnvideo.hunbys.com/180614_5381_807_%E7%AC%AC6%E8%AE%B2%E5%AD%A6%E4%BC%9A%E4%BB%8E%E5%A4%B1%E8%B4%A5%E4%B8%AD%E5%AD%A6%E4%B9%A0.%E5%AE%9E%E6%88%98%E7%AF%87%EF%BC%88%E4%B8%AD%EF%BC%89.mp4?sign=b895b032f7210137a9b13656062cd37d&amp;t=5cf8d8f4&amp;schoolId=10534&amp;isValidate=1">
                     <source id="videoSource" src="" type="video/mp4;">
                 </video>
-                <p id="teachingResource" class="clearfix"><a data="/openresources/before/2018/04/70f09888969b8912c3a39ac2dfdf986c.pdf" download="" class="black999 down"><i class="bg"></i>教辅资料下载</a><a href="javascript:LearnCourse.nextCate(687970)" class="black999 pull-right">下一个</a></p>
+                <p id="teachingResource" class="clearfix"><a href="javascript:LearnCourse.nextCate(687974)" class="black999 pull-right">下一个</a></p>
             </div>
             <div class="tab-cnt">
                 <div class="tab-nav">
@@ -4858,7 +4858,7 @@
 
 
 	<input type="hidden" name="courseId" value="6493">
-	<input type="hidden" name="cataId" value="687970">
+	<input type="hidden" name="cataId" value="687974">
 	<!--输入框-->
    <div class="textarea">
        <p><textarea id="content"></textarea><div id="info-content" class="textarea-limit" style="float:right;">还可以输入<b>500</b>字</div></p>

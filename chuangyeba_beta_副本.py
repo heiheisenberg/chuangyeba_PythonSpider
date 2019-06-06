@@ -20,17 +20,16 @@ class Hunst(object):
     """
     cookie_lvt = {
         'name':'Hm_lvt_e3d5c180b9eb27e8dd46713b446fd944',
-        'value':'1559530870,1559533371,1559701410,1559787551',
+        'value':HM_LVT,   
         'domain':'.hnust.hunbys.com'
     }
     cookie_JL = {
         'name':'JLXCKID',
-        'value':'d1e0b12d-427a-4baa-ba64-a0cecc13e38b',
+        'value':JLXCKID,
         'domain':'.hunbys.com'
     }
     
     def __init__(self):
-
         chrome_options = webdriver.ChromeOptions()
         #chrome_options.add_argument('--headless')       # 无界面运行
         #chrome_options.add_argument('--disable-gpu')
@@ -74,10 +73,15 @@ class Hunst(object):
         #time.sleep(10)
         
         ## 单独测试视频定位
-        #self.driver.find_element_by_xpath('//*[@id="687967"]').click()
-            
-        # 这里进行正则匹配，得到视频播放列表
-        #主循环
+        ##滚动测试
+        #self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
+        #self.driver.find_element_by_xpath('//*[@id="688104"]').click()
+        #self.driver.execute_script("return arguments[0].play()",video_element)  # 开始播放   
+        # # 这里进行正则匹配，得到视频播放列表
+        # #主循环
+        flag = 1
+        current_id = 0
+        next_id = 0
         while True:
             try:
                 WebDriverWait(self.driver, 5, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//div[@class="layui-layer-title"]')))
@@ -108,16 +112,34 @@ class Hunst(object):
                 f.write(self.driver.page_source)
                 f.close()
             # 送入解析函数，得到当前视频id 和播放状态class, 下一个视频id
-            current_id, next_id = get_play_list('playlist.txt')
-            print('current_id:%s     next_id:%s' %(current_id, next_id))
-            if (current_id == '' ) and (next_id != ''):
-                # 当前视频播放完毕
-                # 切换到下一个视频 //*[@id="687967"]
-                time.sleep(10)      #等待当前视频片尾结束
-                next_id_xpath = '//*[@id="{0}"]'.format(int(next_id))
-                self.driver.find_element_by_xpath(next_id_xpath).click()
-            elif next_id == '':
-                print('所有视频都播放完毕，程序退出，感谢使用')        
+            
+            #get_play_list('playlist.txt')
+            # print('current_id:%s     next_id:%s' %(current_id, next_id))
+            # if (current_id == '' ) and (next_id != ''):
+                # # 当前视频播放完毕
+                # # 切换到下一个视频 //*[@id="687967"]
+                # time.sleep(10)      #等待当前视频片尾结束
+                # next_id_xpath = '//*[@id="{0}"]'.format(int(next_id))
+                # self.driver.find_element_by_xpath(next_id_xpath).click()
+            # elif next_id == '':
+                # print('所有视频都播放完毕，程序退出，感谢使用') 
+            #这里代码在视频生命周期只执行一次
+            if flag:
+                current_id, next_id = get_play_list('playlist.txt')
+                current_id_xpath = '//*[@id="{0}"]'.format(int(current_id))
+                self.driver.find_element_by_xpath(current_id_xpath).click()
+                time.sleep(1)
+                flag = 0
+                continue
+            else:
+                now_id, later_id = get_play_list('playlist.txt')
+                if now_id == next_id:
+                    # 跳转到下一个视频
+                    now_id_xpath = '//*[@id="{0}"]'.format(int(now_id))
+                    self.driver.find_element_by_xpath(now_id_xpath).click()
+                    time.sleep(1)
+                    flag = 1
+                
 
                       
 def get_exam_list(filename):
@@ -134,32 +156,25 @@ def get_exam_list(filename):
 
 
 def get_play_list(filename):
-    videoFinish = []        #以看完视频列表
-    currentvideo = ''
-    nextvideo = ''
+
+    current_id = ''
+    next_id = ''
     
     with open(filename, 'r') as f:
         sourcedata = f.read()
         f.close()
    
-    playcompile = re.compile('<a href="javascript:void\(0\)" id="(\d+)" title="(.*?)".*?class="(.*?)".*?>', re.S)
+    playcompile = re.compile('<a href="javascript:void\(0\)" id="(\d+)" title="(.*?)" canbelearn="(.*?)" currentknowledge="(\d)".*?>', re.S)
     playlist    = re.findall(playcompile, sourcedata)
 
     for item in playlist:
-        #print(item)
-        # yield{
-            # 'id':item[0],
-            # 'title':item[1],
-            # 'class':item[2].strip()
-        # }
-        if item[2].strip() == 'videoFinish':
-            videoFinish.append(item[0])
-        elif item[2].strip() == '': 
-            currentvideo = item[0]
-        elif item[2].strip() == 'black999':
-            nextvideo = item[0]
-            break                       # 找到下一个未播放视频就终止迭代
-    return currentvideo, nextvideo            
+        if item[2] == 'true':
+            current_id = item[0]
+        elif item[2] == 'false':
+            next_id = item[0]
+            break
+    
+    return current_id, next_id
 
 
 if __name__ == '__main__':
