@@ -17,7 +17,12 @@
 	
 ## 2.关于验证码和登陆参数
 	这里使用了云打码来过图片验证，如果有自己的账号，可以填入
-	
+	测试版跳过验证，采用cookie值登陆，请自行登陆后查看浏览器当前域cookie,并填入setting.py
+	这里仅用到两个cookie ，请自行把键对应的值填入，查看cookie值方法请自百度
+		Hm_lvt_e3d5c180b9eb27e8dd46713b446fd944
+		JLXCKID
+	注意：
+		正式版验证码验证需要时间，60秒内
 	
 ## 3.文件介绍
 	1.chuangyeba.py		## 主文件
@@ -36,3 +41,4 @@
 ## 4.如何使用
 	设置好必要参数后，在当前文件下调用cmd
 	>python chuangyeba.py
+	>python chuangyeba_beta.py
