@@ -103,8 +103,22 @@ http://hnust.hunbys.com/web/tologin
 courseId: 6493
 cataId: 687978
 ## 是否为课后作业验证？？
-Request URL: http://hnust.hunbys.com/web/examination/exam/235111/6493/687971/1
+http://hnust.hunbys.com/web/examination/exam/235111/6493/687971/1
 http://hnust.hunbys.com/web/examination/examSubmit
 {"courseId":"6493","type":"1","exId":235108,"ccId":"687966","knoId":"687968","answers":[{"qid":"0","value":["A"]},{"qid":"1","value":["A"]},{"qid":"2","value":["B"]},{"qid":"3","value":["B"]},
 {"qid":"4","value":["B"]},{"qid":"5","value":["B"]},{"qid":"9","value":["1"]},{"qid":"10","value":["1"]},{"qid":"11","value":["创业吧"]}],"blankAnswers":[{"qid":"6","value":{"0":"创业"}},{"qi
 d":"7","value":{"0":"创业","1":"创业"}},{"qid":"8","value":{"0":"创业"}}],"total":12,"unanswered":0,"examination":"","token":"7a5dda557291af4300672fb9866fa4c9"}
+
+
+## 章节测试
+http://hnust.hunbys.com/web/examination/exam/235115/6493/687966/2
+http://hnust.hunbys.com/web/examination/exam/235134/6493/687976/2
+http://hnust.hunbys.com/web/examination/exam/235147/6493/688000/2
+http://hnust.hunbys.com/web/examination/exam/235159/6493/688018/2
+http://hnust.hunbys.com/web/examination/exam/235171/6493/688035/2
+http://hnust.hunbys.com/web/examination/exam/235188/6493/688055/2
+http://hnust.hunbys.com/web/examination/exam/235197/6493/688086/2
+http://hnust.hunbys.com/web/examination/exam/235206/6493/688097/2
+
+## 分享链接
+链接: https://pan.baidu.com/s/1bweI8S31LoAlzfG6zItctw 提取码: qwj3 

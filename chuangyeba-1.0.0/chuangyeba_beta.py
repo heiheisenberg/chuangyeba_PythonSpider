@@ -1,5 +1,6 @@
 import re,time
 import os
+import sys
 #import json
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException,ElementNotVisibleException
@@ -8,24 +9,56 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
+import configparser
 
 class Hunst(object):
     """
     实现无人值守24小时刷网课
     """
+    HM_LVT = ''
+    JLXCKID = ''
+    
+    cookie_lvt = {
+        'name':'Hm_lvt_e3d5c180b9eb27e8dd46713b446fd944',
+        'value':HM_LVT,   
+        'domain':'.hnust.hunbys.com'
+    }
+    cookie_JL = {
+        'name':'JLXCKID',
+        'value':JLXCKID,
+        'domain':'.hunbys.com'
+    }
     
     def __init__(self):
+        ## 配置信息初始化
+        self.config = configparser.ConfigParser()
+        self.config.read('setting.ini')
+        sections = self.config.sections()  # 返回所有配置块标题
+        options = self.config.options(sections[0])
+        self.HM_LVT = self.config.get(sections[0], options[0])
+        self.JLXCKID = self.config.get(sections[0], options[1])
+        self.cookie_lvt['value'] = self.HM_LVT
+        self.cookie_JL['value'] = self.JLXCKID
+        
+        print(self.cookie_lvt)
+        print(self.cookie_JL)
+        
         chrome_options = webdriver.ChromeOptions()
-        #chrome_options.add_argument('--headless')       # 无界面运行
-        #chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--start-maximized') # 最大化
         self.driver = webdriver.Chrome(chrome_options=chrome_options)
         
     def visit_index(self):
+    
         # 使用cookie登陆后直接进入主页
-        self.driver.get("http://hnust.hunbys.com/web/tologin")
-        print("请在20秒内完成登陆,程序会等待20秒")
-        time.sleep(20)
+        self.driver.get("http://hnust.hunbys.com/")
+        self.driver.add_cookie(self.cookie_lvt)
+        self.driver.add_cookie(self.cookie_JL)
+        time.sleep(2)
+        self.driver.get("http://hnust.hunbys.com/web/student/course/list")
+    
+        # self.driver.get("http://hnust.hunbys.com/web/tologin")
+        # print("请在20秒内完成登陆,程序会等待20秒")
+        # time.sleep(20)
         
         # 现在开始进入刷课环节，先会弹出签到表
         # 在这里签到完成
@@ -108,9 +141,9 @@ class Hunst(object):
                         flag = 1
                         self.driver.find_element_by_xpath(now_id_xpath).click()
                     except ElementNotVisibleException:
-                        print('元素定位失败，程序退出')
-                        self.driver.quit()
-                
+                        print('元素定位失败，程序即将重启')
+                        time.sleep(2)
+                        restart_program()
 
                       
 def get_exam_list(filename):
@@ -146,6 +179,12 @@ def get_play_list(filename):
             break
     
     return current_id, next_id
+    
+# 程序异常重启函数
+def restart_program():
+    print('restart')
+    python = sys.executable # 获取当前执行python
+    os.execl(python, python, *sys.argv) #执行命令
 
 
 if __name__ == '__main__':
