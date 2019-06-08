@@ -17,6 +17,27 @@ http://hnust.hunbys.com/web/tologin
 //*[@id="video"]
 //*[@id="687967"]
 
+## 8章的标题
+//*[@id="hostBody"]/div[2]/div[2]/div[1]/div[2]/ul/li[2]/p/span
+//*[@id="hostBody"]/div[2]/div[2]/div[1]/div[2]/ul/li[3]/p/span
+//*[@id="hostBody"]/div[2]/div[2]/div[1]/div[2]/ul/li[4]/p/span
+//*[@id="hostBody"]/div[2]/div[2]/div[1]/div[2]/ul/li[5]/p/span
+//*[@id="hostBody"]/div[2]/div[2]/div[1]/div[2]/ul/li[6]/p/span
+//*[@id="hostBody"]/div[2]/div[2]/div[1]/div[2]/ul/li[7]/p/span
+//*[@id="hostBody"]/div[2]/div[2]/div[1]/div[2]/ul/li[8]/p/span
+//*[@id="hostBody"]/div[2]/div[2]/div[1]/div[2]/ul/li[9]/p/span
+
+## 下一章第一个视屏id
+687977   
+688001
+688019
+688036
+688056
+688087
+688098
+
+
+
 
 # 习题选项
 //*[@id="A0"]
@@ -122,3 +143,16 @@ http://hnust.hunbys.com/web/examination/exam/235206/6493/688097/2
 
 ## 分享链接
 链接: https://pan.baidu.com/s/1bweI8S31LoAlzfG6zItctw 提取码: qwj3 
+
+
+## 课后作业
+http://hnust.hunbys.com/web/examination/exam/235107/6493/687967/1
+http://hnust.hunbys.com/web/examination/exam/235108/6493/687968/1
+http://hnust.hunbys.com/web/examination/exam/235109/6493/687969/1
+http://hnust.hunbys.com/web/examination/exam/235111/6493/687971/1
+http://hnust.hunbys.com/web/examination/exam/235113/6493/687973/1
+http://hnust.hunbys.com/web/examination/exam/235114/6493/687975/1
+
+
+http://hnust.hunbys.com/web/examination/exam/235117/6493/687977/1
+http://hnust.hunbys.com/web/examination/exam/235118/6493/687978/1

@@ -40,7 +40,7 @@ payload = {
     'total': 12,
     'unanswered': 0,
     'examination':"",
-    'token': "1a388013315953171fd6d04c310220c1" #文档d20cfa0d5be10f6f33d14298d8062a57
+    'token': "" 
 }
 
 response = requests.post(url=url, data=json.dumps(payload), headers=headers)
