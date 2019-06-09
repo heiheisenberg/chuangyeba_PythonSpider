@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<script src="./md5.js" type="text/javascript" charset="utf-8"></script>
+    <title>md5</title>
+	
+  </head>
+  <body>
+	<a id="out"></a>
+
+	<script>
+	function getPar(par) {
+	//获取当前URL
+	var local_url = document.location.href;
+	//获取要取得的get参数位置
+	var get = local_url.indexOf(par + "=");
+	if(get == -1) {
+		return "";
+	}
+	//截取字符串
+	var get_par = local_url.slice(par.length + get + 1);
+	//判断截取后的字符串是否还有其他get参数
+	var nextPar = get_par.indexOf("&");
+	if(nextPar != -1) {
+		get_par = get_par.slice(0, nextPar);
+	}
+	return get_par;
+	}
+	var secretKey = getPar("secretKey");
+	var userid = getPar("userid")
+	var exId = getPar("exId");
+	console.log(secretKey);
+	console.log(userid)
+	console.log(exId);
+	
+	var md5_a=hex_md5(secretKey+"%"+userid+"%"+exId);
+	var out=document.getElementById('out');
+	console.log(md5_a);
+	//document.write(md5_a)
+	out.innerHTML = md5_a;
+	</script>
+  </body>
+</html>

@@ -103,6 +103,33 @@ def get_hidden_info():
             'token': token
             }
             
+            if exId == '235124'
+                payload = {
+                'courseId': "6493",
+                'type': "1",
+                'exId': exId,                     
+                'ccId': chapterId,
+                'knoId': ccId,                  # 当前视频id
+                "answers":[                         # 选择题
+                    {"qid":"0","value":["A"]},
+                    {"qid":"1","value":["A"]},
+                    {"qid":"2","value":["B"]},
+                    {"qid":"3","value":["B"]},
+                    {"qid":"4","value":["A", "B"]},
+                    {"qid":"5","value":["B", "A"]},
+                    {"qid":"6","value":["1"]},
+                    {"qid":"7","value":["1"]},
+                    {"qid":"11","value":["创业吧"]}],# 最后一个简答题
+                "blankAnswers":[                    # 填空题
+                    {"qid":"8","value":{"0":"创业","1":""}},
+                    {"qid":"9","value":{"0":"创业","1":""}},
+                    {"qid":"10","value":{"0":"创业"}}],
+                'total': 12,
+                'unanswered': 0,
+                'examination':"",
+                'token': token
+                }
+            
             submit = requests.post(url=url_sub, data=json.dumps(payload), headers=headers_post)
             print(submit.status_code)
             # 687985 2.10提交失败

@@ -4,6 +4,8 @@ import configparser
 import re
 import time
 from selenium import webdriver
+from payload2 import *
+import sys
 
 # 读取配置文件，获取cookie
 config = configparser.ConfigParser()
@@ -52,8 +54,14 @@ def get_reqeust_url():
 
 
 # 获得正确试卷答案
-def get_payload(ccId, token):
-    
+def get_payload(exId, token):
+    for item in payloadlist:
+        if item.get('exId') == int(exId):
+            item['token'] = token
+            return item
+    print("exId 索引错误！！")
+    sys.exit(1)
+        
      
 
 def get_hidden_info():
@@ -86,7 +94,7 @@ def get_hidden_info():
             print(token)
             
             ## 传参获得正确载荷数据
-            payload = get_payload(ccId, token)
+            payload = get_payload(exId, token)
             
             submit = requests.post(url=url_sub, data=json.dumps(payload), headers=headers_post)
             print(submit.status_code)
