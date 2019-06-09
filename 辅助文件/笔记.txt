@@ -13,6 +13,7 @@ http://hnust.hunbys.com/web/tologin
 ## 开始学习
 //*[@id="inProgressCourseData"]/div/div[2]/p[2]/span/a
 //*[@id="inProgressCourseData"]/div/div[2]/p[2]/span/a
+//*[@id="inProgressCourseData"]/div/div[2]/p[2]/span
 ## 视屏
 //*[@id="video"]
 //*[@id="687967"]
@@ -60,6 +61,7 @@ str[4]  ##中间：是中文冒号
 # 随堂测试
 //*[@id="layui-layer100001"]/div[1]
 //div[@class="layui-layer-title"]
+//*[@id="doclasswork"]
 
 # 题目主体
 //*[@id="homeWorkTemp"]
@@ -130,6 +132,11 @@ http://hnust.hunbys.com/web/examination/examSubmit
 {"qid":"4","value":["B"]},{"qid":"5","value":["B"]},{"qid":"9","value":["1"]},{"qid":"10","value":["1"]},{"qid":"11","value":["创业吧"]}],"blankAnswers":[{"qid":"6","value":{"0":"创业"}},{"qi
 d":"7","value":{"0":"创业","1":"创业"}},{"qid":"8","value":{"0":"创业"}}],"total":12,"unanswered":0,"examination":"","token":"7a5dda557291af4300672fb9866fa4c9"}
 
+{"courseId":"6493","type":"1","exId":235108,"ccId":"687966","knoId":"687968","answers":
+[{"qid":"0","value":["A"]},{"qid":"1","value":["A"]},{"qid":"2","value":["A"]},{"qid":"3","value":["A"]},{"qid":"4","value":["A","B"]},{"qid":"5","value":["A","B"]},{"qid":"9","value":["1"]},{"qid":"10","value":["1"]},{"qid":"11","value":["创业吧"]}],
+"blankAnswers":[{"qid":"6","value":{"0":"创业"}},{"qid":"7","value":{"0":"创业","1":""}},{"qid":"8","value":{"0":"创业"}}],
+"total":12,"unanswered":0,"examination":"","token":"f856fc91664ee266c578b01267388160"}
+
 
 ## 章节测试
 http://hnust.hunbys.com/web/examination/exam/235115/6493/687966/2
@@ -156,3 +163,22 @@ http://hnust.hunbys.com/web/examination/exam/235114/6493/687975/1
 
 http://hnust.hunbys.com/web/examination/exam/235117/6493/687977/1
 http://hnust.hunbys.com/web/examination/exam/235118/6493/687978/1
+
+## 课后作业
+var token = hex_md5(secretKey+"%"+userid+"%"+exId);
+answer.token = token;
+## 生成token
+http://md5.com/?secretKey=1qaz@WSX8043&userid=163639&exId=235107
+
+13bff26fb6b4b8fd054f09a40ea36a44
+13bff26fb6b4b8fd054f09a40ea36a44
+
+		<input type="hidden" id="courseId" value="6493"/>
+		<input type="hidden" id="ccId" value="687968"/>
+		<input type="hidden" id="type" value="1"/>
+		<input type="hidden" id="chapterId" value="687966"/>
+		<input type="hidden" id="exId" value="235108"/>
+        <input type="hidden" id="status" value=""/>
+        <input type="hidden" id="newExam">
+		<input type="hidden" id="userid" value="163639" />
+		<input type="hidden" id="secretKey" value="1qaz@WSX4958" />

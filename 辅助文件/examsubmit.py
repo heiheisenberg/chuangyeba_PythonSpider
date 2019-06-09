@@ -17,6 +17,7 @@ headers = {
     'X-Requested-With': 'XMLHttpRequest'
 }
 
+
 payload = {
     'courseId': "6493",
     'type': "1",
