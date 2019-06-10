@@ -13,26 +13,30 @@ import threading                    # 1.0.4 新增，超时自动重启
 from goto import with_goto          # 对层嵌套跳出
 
 refresh_signal = 0
+config = configparser.ConfigParser()
+config.read('setting.ini')
+sections = config.sections()  # 返回所有配置块标题
+options = config.options(sections[1])
+timecount = int(config.get(sections[1], options[0]))
+timecopy = timecount            # 备份超时时间
+
 
 
 class Timeout(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
-        self.config = configparser.ConfigParser()
-        self.config.read('setting.ini')
-        sections = self.config.sections()  # 返回所有配置块标题
-        options = self.config.options(sections[1])
-        self.timecount = int(self.config.get(sections[1], options[0]))
-        self.savetimecount = self.timecount
         
     def run(self):
+        print("看门狗线程启动...")
+        global timecount
         while True:
-            if self.timecount == 0:
+            if timecount == 0:
                 global refresh_signal
                 refresh_signal = 1
-                self.timecount = self.savetimecount
+                print("看门狗超时，触发重启进程")
+                break
             else:
-                self.timecount -= 1
+                timecount -= 1
             time.sleep(1)
             #print("timecount:%d" %(self.timecount))
 
@@ -87,6 +91,11 @@ class Hunst(object):
         
     def do_homework(self):
         print('题目弹出...')
+        print('[INFO]正在重置看门狗')
+        global timecount
+        global timecopy
+        timecount = timecopy
+        print("看门狗重置成功：%d" %(timecount))
         # 保存当前页面，提取原题与答案
         with open('exam.txt', 'w', encoding='utf-8') as f:
             f.write(self.driver.page_source)
@@ -228,6 +237,7 @@ class Hunst(object):
                     # 视频切换可以放心刷新
                     self.driver.refresh()
                     video_element = WebDriverWait(self.driver, 5, 0.5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="video"]')))
+                    time.sleep(2)       # 这里确认视频加载成功，可能出现网络延时
                     video_element.click()
                     # ActionChains(self.driver).move_to_element(video_element).perform()
                     # self.driver.execute_script("return arguments[0].play()",video_element)
@@ -235,9 +245,12 @@ class Hunst(object):
             # 在这里检测重启标志位是否被触发
             global refresh_signal
             if refresh_signal == 1:
-                #self.driver.refresh()
+                # 当长时间没响应时，将重启程序
                 print('[INFO]time is up')
                 refresh_signal = 0
+                self.driver.restart_program()
+                
+                
 
                       
 def get_exam_list(filename):
