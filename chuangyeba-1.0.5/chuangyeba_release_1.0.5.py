@@ -12,7 +12,8 @@ import configparser
 import threading                    # 1.0.4 新增，超时自动重启
 from goto import with_goto          # 对层嵌套跳出
 
-refresh_signal = 0
+refresh_signal = 0      # 重启标志位
+errortimes = 0          # 如果错误次数达到10次，判定为不可逆错误
 config = configparser.ConfigParser()
 config.read('setting.ini')
 sections = config.sections()  # 返回所有配置块标题
@@ -90,6 +91,7 @@ class Hunst(object):
         os.execl(python, python, *sys.argv) #执行命令
         
     def do_homework(self):
+        global errortimes
         print('题目弹出...')
         print('[INFO]正在重置看门狗')
         global timecount
@@ -104,10 +106,15 @@ class Hunst(object):
         for item in get_exam_list('exam.txt'):
             try:
                 button_element = self.driver.find_element_by_xpath(item)
+                self.driver.execute_script("arguments[0].scrollIntoView();", button_element)
                 button_element.click()
                 time.sleep(1)
             except:
-                print("做题出现未知错误，请修复")
+                errortimes += 1
+                print("做题出现未知错误，请修复:%d" %(errortimes))
+                if errortimes == 10:
+                    print("[ERROR]不可逆错误,即将重启")
+                    self.restart_program()
                 pass
 
         # 当一切都没问题时，提交答案
