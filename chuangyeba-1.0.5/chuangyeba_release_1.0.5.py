@@ -248,7 +248,7 @@ class Hunst(object):
                 # 当长时间没响应时，将重启程序
                 print('[INFO]time is up')
                 refresh_signal = 0
-                self.driver.restart_program()
+                self.restart_program()
                 
                 
 
