@@ -93,11 +93,6 @@ class Hunst(object):
     def do_homework(self):
         global errortimes
         print('题目弹出...')
-        print('[INFO]正在重置看门狗')
-        global timecount
-        global timecopy
-        timecount = timecopy
-        print("看门狗重置成功：%d" %(timecount))
         # 保存当前页面，提取原题与答案
         with open('exam.txt', 'w', encoding='utf-8') as f:
             f.write(self.driver.page_source)
@@ -178,8 +173,8 @@ class Hunst(object):
    
         # 主循环
         flag = 1
-        current_id = 0
-        next_id = 0
+        current_id = ''
+        next_id = ''
         while True:
             label .start
             # 判断是否弹窗
@@ -248,7 +243,12 @@ class Hunst(object):
                     video_element.click()
                     # ActionChains(self.driver).move_to_element(video_element).perform()
                     # self.driver.execute_script("return arguments[0].play()",video_element)
-                    print('[INFO]切换视频成功')    
+                    print('[INFO]切换视频成功,当前视频id:%s / 688104' %(now_id)) 
+                    print('[INFO]正在重置看门狗')
+                    global timecount
+                    global timecopy
+                    timecount = timecopy
+                    print("[INFO]看门狗重置成功：%d" %(timecount))
             # 在这里检测重启标志位是否被触发
             global refresh_signal
             if refresh_signal == 1:

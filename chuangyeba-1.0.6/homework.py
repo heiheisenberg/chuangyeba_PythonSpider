@@ -103,7 +103,7 @@ def get_hidden_info():
             'token': token
             }
             
-            if exId == '235124'
+            if exId == '235124':
                 payload = {
                 'courseId': "6493",
                 'type': "1",

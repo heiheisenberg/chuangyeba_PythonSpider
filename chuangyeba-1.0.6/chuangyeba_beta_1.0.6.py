@@ -2,7 +2,7 @@ import re,time
 import os
 import sys
 from selenium import webdriver
-from selenium.common.exceptions import TimeoutException,ElementNotVisibleException
+from selenium.common.exceptions import TimeoutException,ElementNotVisibleException,ElementClickInterceptedException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -10,28 +10,34 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import configparser
 import threading                    # 1.0.4 新增，超时自动重启
+from goto import with_goto          # 对层嵌套跳出
 
-refresh_signal = 0
+refresh_signal = 0      # 重启标志位
+errortimes = 0          # 如果错误次数达到10次，判定为不可逆错误
+config = configparser.ConfigParser()
+config.read('setting.ini')
+sections = config.sections()  # 返回所有配置块标题
+options = config.options(sections[1])
+timecount = int(config.get(sections[1], options[0]))
+timecopy = timecount            # 备份超时时间
+
 
 
 class Timeout(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
-        self.config = configparser.ConfigParser()
-        self.config.read('setting.ini')
-        sections = self.config.sections()  # 返回所有配置块标题
-        options = self.config.options(sections[1])
-        self.timecount = int(self.config.get(sections[1], options[0]))
-        self.savetimecount = self.timecount
         
     def run(self):
+        print("看门狗线程启动...")
+        global timecount
         while True:
-            if self.timecount == 0:
+            if timecount == 0:
                 global refresh_signal
                 refresh_signal = 1
-                self.timecount = self.savetimecount
+                print("看门狗超时，触发重启进程")
+                break
             else:
-                self.timecount -= 1
+                timecount -= 1
             time.sleep(1)
             #print("timecount:%d" %(self.timecount))
 
@@ -73,19 +79,17 @@ class Hunst(object):
         print(self.cookie_JL)
         
         chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('--headless')        # 启动无头模式
         chrome_options.add_argument('--start-maximized') # 最大化
-        #chrome_options.add_argument('--headless')        # 启动无头模式
         self.driver = webdriver.Chrome(chrome_options=chrome_options)
-    
-    
-    # 特殊视频id处理函数
-    def special_deal(self, next_id):
-        for index, id in enumerate(self.special_id, start=3):
-            if id == next_id:
-                xpath = '//*[@id="hostBody"]/div[2]/div[2]/div[1]/div[2]/ul/li[{0}]/p/span'.format(index)
-                target = self.driver.find_element_by_xpath(xpath)
-                self.driver.execute_script("arguments[0].scrollIntoView();", target)
-                self.driver.execute_script("arguments[0].click();", target)
+        
+        # 开始设置浏览器属性//*[@id="labelWrapper"]/div[1]  //*[@id="bar"]
+        # 网站静音
+        # #labelWrapper > div:nth-child(1) #labelWrapper > div:nth-child(1)
+        #self.driver.get('chrome://settings/content/sound')
+        #sound_element = self.driver.find_element_by_css_selector('#labelWrapper > div:nth-child(1)')
+        #sound_element.click()
+        #self.driver.close()
     
     
     # 程序异常重启函数
@@ -95,51 +99,62 @@ class Hunst(object):
         python = sys.executable # 获取当前执行python
         os.execl(python, python, *sys.argv) #执行命令
         
-        
-    # 定时刷新页面
-    def refresh_web(self):
-        print('开始刷新')
-        self.driver.refresh()
-        ## 如果刷新后出现题目，先做题目
-        try:
-            WebDriverWait(self.driver, 3, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="doclasswork"]')))
-            print('题目弹出...')
-            # 保存当前页面，提取原题与答案
-            with open('exam.txt', 'w', encoding='utf-8') as f:
-                f.write(self.driver.page_source)
-                f.close()
+    def do_homework(self):
+        global errortimes
+        print('题目弹出...')
+        # 保存当前页面，提取原题与答案
+        with open('exam.txt', 'w', encoding='utf-8') as f:
+            f.write(self.driver.page_source)
+            f.close()
 
-            for item in get_exam_list('exam.txt'):
+        for item in get_exam_list('exam.txt'):
+            try:
+                button_element = self.driver.find_element_by_xpath(item)
+                self.driver.execute_script("arguments[0].scrollIntoView();", button_element)
+                button_element.click()
+                time.sleep(1)
+            except:
+                errortimes += 1
+                print("做题出现未知错误，请修复:%d" %(errortimes))
+                if errortimes == 10:
+                    print("[ERROR]不可逆错误,即将重启")
+                    self.restart_program()
+                pass
+
+        # 当一切都没问题时，提交答案
+        print('做题完毕,正在提交')
+        submit_element = self.driver.find_element_by_xpath('//*[@class="layui-layer-btn0"]')
+        self.driver.execute_script("arguments[0].click();", submit_element)
+        print('提交成功')
+        
+        time.sleep(2)
+        # video_element = WebDriverWait(self.driver, 5, 0.5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="video"]')))
+        # ActionChains(self.driver).move_to_element(video_element).perform()
+        # video_element.click()
+        video_element = WebDriverWait(self.driver, 5, 0.5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="video"]')))
+        ActionChains(self.driver).move_to_element(video_element).perform()
+        self.driver.execute_script("return arguments[0].play()",video_element)
+        print("[INFO]视频继续播放中...") 
+        
+        
+        
+    # 特殊视频id处理函数
+    def special_deal(self, next_id):
+        for index, id in enumerate(self.special_id, start=3):
+            if id == next_id:
                 try:
-                    button_element = self.driver.find_element_by_xpath(item)
-                    self.driver.execute_script("arguments[0].click();", button_element)
-                    time.sleep(1)
-                except:
-                    print("刷新时做题失败，请修复")
-                    pass
+                    xpath = '//*[@id="hostBody"]/div[2]/div[2]/div[1]/div[2]/ul/li[{0}]/p/span'.format(index)
+                    target = self.driver.find_element_by_xpath(xpath)
+                    self.driver.execute_script("arguments[0].scrollIntoView();", target)
+                    target.click()
+                except ElementClickInterceptedException as e:
+                    print("[ERROR]视频列表展开无效，即将重启")
+                    print(e)
+                    time.sleep(2)
+                    self.restart_program()
+                
 
-            # 当一切都没问题时，提交答案
-            print('做题完毕')
-            tijiao_element = self.driver.find_element_by_xpath('//*[@class="layui-layer-btn0"]')
-            self.driver.execute_script("arguments[0].scrollIntoView();", tijiao_element)
-            tijiao_element.click()
-            return None    
-        except TimeoutException:
-            pass
-            
-        try:
-            video_element = WebDriverWait(self.driver, 10, 0.5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="video"]')))
-            ActionChains(self.driver).move_to_element(video_element).perform()
-            video_element.click()
-            print("refresh playvideo finish")
-            #self.driver.execute_script("return arguments[0].play()",video_element)  # 开始播放,默认播放
-        except:
-            print("刷新页面失败或加载视频失败,即将重启")
-            time.sleep(2)
-            self.restart_program()
-        
-    
-    
+    @with_goto
     def visit_index(self):
         # 使用cookie登陆后直接进入主页
         self.driver.get("http://hnust.hunbys.com/")
@@ -160,60 +175,43 @@ class Hunst(object):
             WebDriverWait(self.driver, 2, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="hasnotSign"]')))
             qiao_element = self.driver.find_element_by_xpath(qiandao)
             self.driver.execute_script("arguments[0].click();", qiao_element)
-            print('签到完成...')
+            print('[INFO]签到成功')
             time.sleep(2)
         except TimeoutException:
             # 超时时表示今天签到完成
-            print('今日已完成签到,或者cookie失效')
             pass
         
         # 点击学习，进入学习
         try:
-            study_element = WebDriverWait(self.driver, 2, 0.5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="inProgressCourseData"]/div/div[2]/p[2]/span/a'))) 
+            WebDriverWait(self.driver, 2, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="inProgressCourseData"]/div/div[2]/p[2]/span/a')))
+            study_element = self.driver.find_element_by_xpath('//*[@id="inProgressCourseData"]/div/div[2]/p[2]/span/a')
             self.driver.execute_script("arguments[0].click();", study_element)
+            print('[INFO]开始进入学习')
         except TimeoutException:
             self.driver.quit()
-            print('当前cookie已失效，请重新设置cookie值')
+            print('[WARING]当前cookie已失效，请重新设置cookie值')
             input('请按任意键结束...')
             sys.exit(1)
         
-        # 继续上一次进度
-        video_element = WebDriverWait(self.driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, '//*[@id="video"]')))
+        time.sleep(2)
+        video_element = WebDriverWait(self.driver, 5, 0.5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="video"]')))
         ActionChains(self.driver).move_to_element(video_element).perform()
-        print("start play...")
-        self.driver.execute_script("return arguments[0].play()",video_element)  # 开始播放,默认播放
-        
+        video_element.click()
+        print("视频播放中...")
+   
         # 主循环
         flag = 1
-        current_id = 0
-        next_id = 0
+        current_id = ''
+        next_id = ''
         while True:
+            label .start
+            # 判断是否弹窗
             try:
-                WebDriverWait(self.driver, 5, 0.5).until(EC.presence_of_element_located((By.XPATH, '//div[@class="layui-layer-title"]')))
-                print('题目弹出...')
-                # 保存当前页面，提取原题与答案
-                with open('exam.txt', 'w', encoding='utf-8') as f:
-                    f.write(self.driver.page_source)
-                    f.close()
-
-                for item in get_exam_list('exam.txt'):
-                    try:
-                        button_element = self.driver.find_element_by_xpath(item)
-                        self.driver.execute_script("arguments[0].click();", button_element)
-                        time.sleep(1)
-                    except:
-                        print("做题失败,请修复")
-                        pass
-
-                # 当一切都没问题时，提交答案
-                print('做题完毕')
-                tijiao_element = self.driver.find_element_by_xpath('//*[@class="layui-layer-btn0"]')
-                self.driver.execute_script("arguments[0].scrollIntoView();", tijiao_element)
-                tijiao_element.click()
-                time.sleep(2)   
+                WebDriverWait(self.driver, 5, 0.5).until(EC.presence_of_element_located((By.XPATH, '//*[@id="doclasswork"]')))
+                self.do_homework()
             except TimeoutException:
                 pass
-                
+            
             # 如果视频播放完毕，切换下一个，先要判断当前视频是否播放结束
             # 爬取播放列表
             with open('playlist.txt','w', encoding='utf-8') as f:
@@ -229,15 +227,15 @@ class Hunst(object):
                 else:
                     # 在这里确保当前视频是可以正常播放的
                     while True:
-                        try:
+                        try: 
                             current_id_xpath = '//*[@id="{0}"]'.format(int(current_id))
-                            videolist_element = self.driver.find_element_by_xpath(current_id_xpath)
-                            self.driver.execute_script("arguments[0].click();", videolist_element)
+                            self.driver.find_element_by_xpath(current_id_xpath).click()
                             break
                         except ElementNotVisibleException:
-                            # 出现异常，可能是当前元素不可见
+                            # 出现异常，可能是当前元素不可见,可能是遭遇弹窗
+                            # 如果遭遇弹窗，回到弹窗检测
+                            print('[WARING]当前id与测量id不同')
                             self.special_deal(current_id)
-                time.sleep(1)
                 flag = 0
                 continue
             else:
@@ -246,21 +244,36 @@ class Hunst(object):
                     # 跳转到下一个视频
                     try:
                         now_id_xpath = '//*[@id="{0}"]'.format(int(now_id))
-                        time.sleep(1)
                         flag = 1
                         target = self.driver.find_element_by_xpath(now_id_xpath)
                         self.driver.execute_script("arguments[0].scrollIntoView();", target)
-                        self.driver.execute_script("arguments[0].click();", target)
+                        target.click()
                     except ElementNotVisibleException:
-                        print('元素定位失败，程序即将重启')
-                        time.sleep(2)
-                        self.restart_program()
-                        
-            # 在这里检测刷新标志位是否被触发
+                        print('[ERROR]元素定位失败，可能是遭遇弹窗')
+                        goto .start
+                    except ElementClickInterceptedException:
+                        print("[ERROR]元素点击冲突")
+                        goto .start
+                    # 视频切换可以放心刷新
+                    self.driver.refresh()
+                    video_element = WebDriverWait(self.driver, 5, 0.5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="video"]')))
+                    time.sleep(2)       # 这里确认视频加载成功，可能出现网络延时
+                    video_element.click()
+                    print('[INFO]切换视频成功,当前视频id:%s / 688104' %(now_id)) 
+                    print('[INFO]正在重置看门狗')
+                    global timecount
+                    global timecopy
+                    timecount = timecopy
+                    print("[INFO]看门狗重置成功：%d" %(timecount))
+            # 在这里检测重启标志位是否被触发
             global refresh_signal
             if refresh_signal == 1:
-                self.refresh_web()
+                # 当长时间没响应时，将重启程序
+                print('[WARNING]time is up,restart now')
                 refresh_signal = 0
+                self.restart_program()
+                
+                
 
                       
 def get_exam_list(filename):

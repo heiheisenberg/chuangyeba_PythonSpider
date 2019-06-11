@@ -1,0 +1,4 @@
+2019-06-10 21:47:10,931 - <ipython-input-3-2a9d566bcae9>[line:32] - INFO: this is a logger info message
+2019-06-10 21:47:10,932 - <ipython-input-3-2a9d566bcae9>[line:33] - WARNING: this is a logger warning message
+2019-06-10 21:47:10,941 - <ipython-input-3-2a9d566bcae9>[line:34] - ERROR: this is a logger error message
+2019-06-10 21:47:10,945 - <ipython-input-3-2a9d566bcae9>[line:35] - CRITICAL: this is a logger critical message
