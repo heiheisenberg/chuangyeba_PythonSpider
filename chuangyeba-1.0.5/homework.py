@@ -49,9 +49,6 @@ def get_reqeust_url():
         
 
 def get_hidden_info():
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument('--headless') # 无头模式
-    driver = webdriver.Chrome(chrome_options=chrome_options)
     for url in get_reqeust_url():
         if url != '':
             response = requests.get(url=url, headers=headers_get)
@@ -68,13 +65,16 @@ def get_hidden_info():
                 'exId':exId,
                 'userid':userid
             }
-
+    
             md5_url = 'http://md5.com/?secretKey={0}&userid={1}&exId={2}'.format(secretKey, userid, exId)
+            chrome_options = webdriver.ChromeOptions()
+            chrome_options.add_argument('--headless') # 无头模式
+            driver = webdriver.Chrome(chrome_options=chrome_options)
             driver.get(md5_url)
             time.sleep(0.5)
             input = driver.find_element_by_xpath('//*[@id="out"]')
             token = input.text
-            driver.close()
+            driver.quit()
             print(token)
             
             payload = {
@@ -133,7 +133,6 @@ def get_hidden_info():
             submit = requests.post(url=url_sub, data=json.dumps(payload), headers=headers_post)
             print(submit.status_code)
             time.sleep(0.5)
-    driver.quit()
 
 
 if __name__ == "__main__":

@@ -65,9 +65,6 @@ def get_payload(exId, token):
      
 
 def get_hidden_info():
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument('--headless') # 无头模式
-    driver = webdriver.Chrome(chrome_options=chrome_options)
     for url in get_reqeust_url():
         if url != '':
             response = requests.get(url=url, headers=headers_get)
@@ -87,11 +84,14 @@ def get_hidden_info():
 
 
             md5_url = 'http://md5.com/?secretKey={0}&userid={1}&exId={2}'.format(secretKey, userid, exId)
+            chrome_options = webdriver.ChromeOptions()
+            chrome_options.add_argument('--headless') # 无头模式
+            driver = webdriver.Chrome(chrome_options=chrome_options)
             driver.get(md5_url)
             time.sleep(0.5)
             input = driver.find_element_by_xpath('//*[@id="out"]')
             token = input.text
-            driver.close()
+            driver.quit()
             print(token)
             
             ## 传参获得正确载荷数据
@@ -100,7 +100,7 @@ def get_hidden_info():
             submit = requests.post(url=url_sub, data=json.dumps(payload), headers=headers_post)
             print(submit.status_code)
             time.sleep(2)
-    driver.quit()
+
 
 if __name__ == "__main__":
     print("请确保当前cookie值正确，在这里请复制完整cookie值：")
