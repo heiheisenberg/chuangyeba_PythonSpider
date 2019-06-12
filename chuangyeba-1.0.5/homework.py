@@ -49,6 +49,9 @@ def get_reqeust_url():
         
 
 def get_hidden_info():
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument('--headless') # 无头模式
+    driver = webdriver.Chrome(chrome_options=chrome_options)
     for url in get_reqeust_url():
         if url != '':
             response = requests.get(url=url, headers=headers_get)
@@ -66,15 +69,12 @@ def get_hidden_info():
                 'userid':userid
             }
 
-            chrome_options = webdriver.ChromeOptions()
-            chrome_options.add_argument('--headless') # 无头模式
-            driver = webdriver.Chrome(chrome_options=chrome_options)
             md5_url = 'http://md5.com/?secretKey={0}&userid={1}&exId={2}'.format(secretKey, userid, exId)
             driver.get(md5_url)
             time.sleep(0.5)
             input = driver.find_element_by_xpath('//*[@id="out"]')
             token = input.text
-            driver.quit()
+            driver.close()
             print(token)
             
             payload = {
@@ -132,8 +132,9 @@ def get_hidden_info():
             
             submit = requests.post(url=url_sub, data=json.dumps(payload), headers=headers_post)
             print(submit.status_code)
-            # 687985 2.10提交失败
-            #time.sleep(2)
+            time.sleep(0.5)
+    driver.quit()
+
 
 if __name__ == "__main__":
     print("请确保当前cookie值正确，在这里请复制完整cookie值：")

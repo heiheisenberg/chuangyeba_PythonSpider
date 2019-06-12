@@ -69,7 +69,7 @@
     <script type="text/javascript" src="http://hnust.hunbys.com/plugins/other/pdfobject.js"></script>
     <script type="text/javascript" src="http://hnust.hunbys.com/plugins/layer/layer.js"></script><link rel="stylesheet" href="http://hnust.hunbys.com/plugins/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss">
     <script type="text/javascript" src="http://hnust.hunbys.com/js/md5.js"></script>
-<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=433406"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"></head>
+<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=433416"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"></head>
 <body style=" background-color:#fff;" id="hostBody">
 <base href="http://hnust.hunbys.com:80/">
 <meta charset="UTF-8">
@@ -294,7 +294,7 @@
             
             <span id="countDown">
                 <a class="share" style="padding-left: 200px;">当前成绩：<span id="curScore">0.0</span>分</a>
-                <input id="beginTime" type="hidden" value="20190611231715">
+                <input id="beginTime" type="hidden" value="20190612091504">
             </span>
             <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
         </div>
@@ -1025,9 +1025,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1" class="videoPlaying">
+                                    <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687988" title="拓展学习-创业团队的管理：计划" canbelearn="true" currentknowledge="1" coursetype="1" class="  " onclick="LearnCourse.initVideo(6493,687988,1,event)">
+                                            <a href="javascript:void(0)" id="687988" title="拓展学习-创业团队的管理：计划" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687988,1,event)">
                                                 <i class="bg"></i>2.13
                                                  
 												    
@@ -1044,7 +1044,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/675429b28eb2a8b698b1732afb665d6f.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="display: none;">
+                                        <div class="show" style="">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -1058,9 +1058,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1">
+                                    <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687989" title="拓展学习-创业团队的管理：组织" canbelearn="false" currentknowledge="0" coursetype="1" class="  black999" onclick="LearnCourse.initVideo(6493,687989,1,event)">
+                                            <a href="javascript:void(0)" id="687989" title="拓展学习-创业团队的管理：组织" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687989,1,event)">
                                                 <i class="bg"></i>2.14
                                                  
 												    
@@ -1091,9 +1091,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1">
+                                    <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687990" title="拓展学习-创业团队的管理：领导(上)" canbelearn="false" currentknowledge="0" coursetype="1" class="  black999" onclick="LearnCourse.initVideo(6493,687990,1,event)">
+                                            <a href="javascript:void(0)" id="687990" title="拓展学习-创业团队的管理：领导(上)" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687990,1,event)">
                                                 <i class="bg"></i>2.15
                                                  
 												    
@@ -1124,9 +1124,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1">
+                                    <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687991" title="拓展学习-创业团队的管理：领导(下)" canbelearn="false" currentknowledge="0" coursetype="1" class="  black999" onclick="LearnCourse.initVideo(6493,687991,1,event)">
+                                            <a href="javascript:void(0)" id="687991" title="拓展学习-创业团队的管理：领导(下)" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687991,1,event)">
                                                 <i class="bg"></i>2.16
                                                  
 												    
@@ -1157,9 +1157,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1">
+                                    <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687992" title="拓展学习-创业团队的管理：控制(上)" canbelearn="false" currentknowledge="0" coursetype="1" class="  black999" onclick="LearnCourse.initVideo(6493,687992,1,event)">
+                                            <a href="javascript:void(0)" id="687992" title="拓展学习-创业团队的管理：控制(上)" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687992,1,event)">
                                                 <i class="bg"></i>2.17
                                                  
 												    
@@ -1190,9 +1190,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1">
+                                    <li coursetype="1" class="selected2">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687993" title="拓展学习-创业团队的管理：控制(下)" canbelearn="false" currentknowledge="0" coursetype="1" class="  black999" onclick="LearnCourse.initVideo(6493,687993,1,event)">
+                                            <a href="javascript:void(0)" id="687993" title="拓展学习-创业团队的管理：控制(下)" canbelearn="true" currentknowledge="0" coursetype="1" class="videoFinish  " onclick="LearnCourse.initVideo(6493,687993,1,event)">
                                                 <i class="bg"></i>2.18
                                                  
 												    
@@ -1223,9 +1223,9 @@
                                         </div>
                                     </li>
                                 
-                                    <li coursetype="1">
+                                    <li coursetype="1" class="videoPlaying">
                                         <p class="part01">
-                                            <a href="javascript:void(0)" id="687994" title="拓展学习-创业团队的社会责任" canbelearn="false" currentknowledge="0" coursetype="1" class="  black999" onclick="LearnCourse.initVideo(6493,687994,1,event)">
+                                            <a href="javascript:void(0)" id="687994" title="拓展学习-创业团队的社会责任" canbelearn="true" currentknowledge="1" coursetype="1" class="  " onclick="LearnCourse.initVideo(6493,687994,1,event)">
                                                 <i class="bg"></i>2.19
                                                  
 												    
@@ -1242,7 +1242,7 @@
                                                 <a href="http://xy.hunbys.com/openresources/before/2018/04/4bf2d3dae4936e3da75a26cee42e7b5c.pdf" download="" class="bg download"></a>
                                             
                                         </p>
-                                        <div class="show" style="">
+                                        <div class="show" style="display: none;">
                                             <div class="date">
                                                 <p>作业上交：2019-08-01 14:54</p>
                                                 <p>在线答疑：-</p>
@@ -4829,10 +4829,10 @@
         </div>
         <div class="content03-right" id="videoContent" style="display: block;">
             <div class="video">
-                <video onclick="LearnCourse.stop()" id="video" cataid="" width="816" height="456" preload="" controls="controls" controlslist="nodownload" src="http://hnvideo.hunbys.com/180614_5381_807_%E7%AC%AC10%E8%AE%B2%E5%88%9B%E4%B8%9A%E5%9B%A2%E9%98%9F%E7%9A%84%E7%AE%A1%E7%90%86%EF%BC%9A%E8%AE%A1%E5%88%92.mp4?sign=c627ae6f552e20037e27a3011045eace&amp;t=5cffd40b&amp;schoolId=10534&amp;isValidate=1">
+                <video onclick="LearnCourse.stop()" id="video" cataid="" width="816" height="456" preload="" controls="controls" controlslist="nodownload" src="http://hnvideo.hunbys.com/180614_5381_807_%E7%AC%AC14%E8%AE%B2%E5%88%9B%E4%B8%9A%E5%9B%A2%E9%98%9F%E7%9A%84%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB.mp4?sign=c208ff8f6043e2f45be07c3fac2ec6fa&amp;t=5d006029&amp;schoolId=10534&amp;isValidate=1">
                     <source id="videoSource" src="" type="video/mp4;">
                 </video>
-                <p id="teachingResource" class="clearfix"><a href="javascript:LearnCourse.nextCate(687988)" class="black999 pull-right">下一个</a></p>
+                <p id="teachingResource" class="clearfix"><a href="javascript:LearnCourse.nextCate(687994)" class="black999 pull-right">下一个</a></p>
             </div>
             <div class="tab-cnt">
                 <div class="tab-nav">
@@ -4858,7 +4858,7 @@
 
 
 	<input type="hidden" name="courseId" value="6493">
-	<input type="hidden" name="cataId" value="687988">
+	<input type="hidden" name="cataId" value="687994">
 	<!--输入框-->
    <div class="textarea">
        <p><textarea id="content"></textarea><div id="info-content" class="textarea-limit" style="float:right;">还可以输入<b>500</b>字</div></p>
@@ -5417,4 +5417,4 @@ $(".checkboxCli").live('click',function(){
 </script>
 
 
-<div class="r-fixed" style="bottom: 300px;"><span>在线客服</span>                <div class="item0"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank"></a></div>                <div class="item1">                    <div class="info">                        <img src="/openresources/app_download_qr_code/image/2018/09/a9bb93efcfc292d16e0aa496303e96cf_c.png">                        <span style="width:80px; color:#999999; margin-top: 5px; margin-bottom:-20px;">App下载</span>                    </div>                </div>                <div class="item2"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank" style="height:100%;width: 100%;display: block;"></a></div></div><div class="layui-layer-move"></div></body></html>
+<div class="r-fixed" style="bottom: 300px;"><span>在线客服</span>                <div class="item0"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank"></a></div>                <div class="item1">                    <div class="info">                        <img src="/openresources/app_download_qr_code/image/2018/09/a9bb93efcfc292d16e0aa496303e96cf_c.png">                        <span style="width:80px; color:#999999; margin-top: 5px; margin-bottom:-20px;">App下载</span>                    </div>                </div>                <div class="item2"><a href="http://q.url.cn/cd9xdH?_type=wpa&amp;qidian=true" target="_blank" style="height:100%;width: 100%;display: block;"></a></div></div></body></html>
