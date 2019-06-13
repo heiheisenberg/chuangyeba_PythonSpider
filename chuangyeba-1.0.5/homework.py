@@ -66,7 +66,7 @@ def get_hidden_info():
                 'userid':userid
             }
     
-            md5_url = 'http://md5.com/?secretKey={0}&userid={1}&exId={2}'.format(secretKey, userid, exId)
+            md5_url = 'http://120.79.174.63/?secretKey={0}&userid={1}&exId={2}'.format(secretKey, userid, exId)
             chrome_options = webdriver.ChromeOptions()
             chrome_options.add_argument('--headless') # 无头模式
             driver = webdriver.Chrome(chrome_options=chrome_options)

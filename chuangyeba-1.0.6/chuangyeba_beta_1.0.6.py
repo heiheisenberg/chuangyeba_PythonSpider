@@ -193,11 +193,15 @@ class Hunst(object):
             input('请按任意键结束...')
             sys.exit(1)
         
-        time.sleep(2)
-        video_element = WebDriverWait(self.driver, 5, 0.5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="video"]')))
-        ActionChains(self.driver).move_to_element(video_element).perform()
-        video_element.click()
-        print("视频播放中...")
+        try:
+            time.sleep(2)
+            video_element = WebDriverWait(self.driver, 3, 0.5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="video"]')))
+            ActionChains(self.driver).move_to_element(video_element).perform()
+            video_element.click()
+            print("视频播放中...")
+        except:
+            print('[WARING]视频元素定位失败,可能遭遇弹窗')
+            pass
    
         # 主循环
         flag = 1
