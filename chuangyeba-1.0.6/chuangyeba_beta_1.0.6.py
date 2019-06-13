@@ -179,6 +179,15 @@ class Hunst(object):
             time.sleep(2)
         except TimeoutException:
             # 超时时表示今天签到完成
+            print('[INFO]今日已完成签到')
+            pass
+            
+        # 打印当前登录信息
+        try:
+            loginname_element = self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/div/div/div[1]/span')
+            print('welcome:', loginname_element.text)
+        except:
+            print('[ERROR]获取登录信息失败')
             pass
         
         # 点击学习，进入学习
