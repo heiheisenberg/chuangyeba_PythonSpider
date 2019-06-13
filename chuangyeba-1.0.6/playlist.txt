@@ -69,7 +69,7 @@
     <script type="text/javascript" src="http://hnust.hunbys.com/plugins/other/pdfobject.js"></script>
     <script type="text/javascript" src="http://hnust.hunbys.com/plugins/layer/layer.js"></script><link rel="stylesheet" href="http://hnust.hunbys.com/plugins/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss">
     <script type="text/javascript" src="http://hnust.hunbys.com/js/md5.js"></script>
-<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=433450"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"></head>
+<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=433454"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"></head>
 <body style=" background-color:#fff;" id="hostBody">
 <base href="http://hnust.hunbys.com:80/">
 <meta charset="UTF-8">
@@ -294,7 +294,7 @@
             
             <span id="countDown">
                 <a class="share" style="padding-left: 200px;">当前成绩：<span id="curScore">82.9</span>分</a>
-                <input id="beginTime" type="hidden" value="20190613191929">
+                <input id="beginTime" type="hidden" value="20190613232832">
             </span>
             <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
         </div>
