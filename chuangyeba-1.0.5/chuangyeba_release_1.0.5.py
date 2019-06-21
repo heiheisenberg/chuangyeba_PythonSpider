@@ -35,6 +35,7 @@ class Timeout(threading.Thread):
                 global refresh_signal
                 refresh_signal = 1
                 print("看门狗超时，触发重启进程")
+                hnust.restart_program()
                 break
             else:
                 timecount -= 1
@@ -249,15 +250,6 @@ class Hunst(object):
                     global timecopy
                     timecount = timecopy
                     print("[INFO]看门狗重置成功：%d" %(timecount))
-            # 在这里检测重启标志位是否被触发
-            global refresh_signal
-            if refresh_signal == 1:
-                # 当长时间没响应时，将重启程序
-                print('[INFO]time is up')
-                refresh_signal = 0
-                self.restart_program()
-                
-                
 
                       
 def get_exam_list(filename):
@@ -295,9 +287,9 @@ def get_play_list(filename):
 
 
 if __name__ == '__main__':
-    timethread = Timeout()
-    timethread.start()
-    
     hnust = Hunst()
+    timethread = Timeout()
+    
+    timethread.start()
     hnust.visit_index() 
         

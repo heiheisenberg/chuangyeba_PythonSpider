@@ -175,20 +175,29 @@ class Hunst(object):
         print('[INFO]正在登陆中...')
         time.sleep(1)
                 
-
+    # ------------------------------------------------------------------------------
     @with_goto
     def visit_index(self):
         # 使用cookie登陆后直接进入主页
-        self.driver.get("http://hnust.hunbys.com/")
+        self.driver.get("http://hnust.hunbys.com/web/tologin")
         self.driver.add_cookie(self.cookie_lvt)
         self.driver.add_cookie(self.cookie_JL)
         time.sleep(2)
-        self.driver.get("http://hnust.hunbys.com/web/student/course/list")
+        self.driver.get("http://hnust.hunbys.com/web/student/course/list#0")
         
         # 登陆检查
         try:
-            login_element = WebDriverWait(self.driver, 2, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="login_btn"]')))
+            login_element = WebDriverWait(self.driver, 2, 0.5).until(EC.presence_of_element_located((By.XPATH, '//*[@id="inProgressCourseData"]/div/div[2]/p[1]/a')))
+        except TimeoutException: 
             print('[INFO]cookie 失效，正在尝试登陆')
+            # 先把旧cookie值删除
+            self.config.set("cookie", "HM_LVT",'')
+            self.config.set("cookie", "JLXCKID", '')
+            with open('setting.ini', 'r+') as fpini:
+                self.config.write(fpini)
+                fpini.close()
+            # 重新请求    
+            self.driver.get('http://hnust.hunbys.com/web/tologin')
             cookies = self.driver.get_cookies()
             cookies_dict = {}
             for item in cookies:
@@ -203,19 +212,16 @@ class Hunst(object):
                 f.close()
             self.yundama()
             # 登陆成功后保存cookie值
-            self.config.read('setting.ini')
             self.config.set("cookie", "HM_LVT", cookies_dict['Hm_lvt_e3d5c180b9eb27e8dd46713b446fd944'])
             self.config.set("cookie", "JLXCKID", cookies_dict['JLXCKID'])
             with open('setting.ini', 'r+') as fpini:
                 self.config.write(fpini)
                 fpini.close()
-        except TimeoutException:
-            pass
-        except Exception as e:
+        except:
             print('[ERROR]登陆失败')
-            print(e)
-            sys.exit(1)
+            sys.exit(-1)
         print('[INFO]登陆成功')
+        
 
         
         # 现在开始进入刷课环节，先会弹出签到表
@@ -246,17 +252,40 @@ class Hunst(object):
             pass
         
         # 点击学习，进入学习
+        # try:
+            # WebDriverWait(self.driver, 2, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="inProgressCourseData"]/div/div[2]/p[2]/span/a')))
+            # study_element = self.driver.find_element_by_xpath('//*[@id="inProgressCourseData"]/div/div[2]/p[2]/span/a')
+            # self.driver.execute_script("arguments[0].click();", study_element)
+            # print('[INFO]开始进入学习')
+        # except TimeoutException:
+            # self.driver.quit()
+            # print('[WARING]登陆失败')
+            # input('请按任意键结束...')
+            # sys.exit(1)
+        
+        # 开始学习流程
         try:
-            WebDriverWait(self.driver, 2, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="inProgressCourseData"]/div/div[2]/p[2]/span/a')))
-            study_element = self.driver.find_element_by_xpath('//*[@id="inProgressCourseData"]/div/div[2]/p[2]/span/a')
+            WebDriverWait(self.driver, 2, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="inProgressCourseData"]/div/div[2]/p[1]/a')))
+            study_element = self.driver.find_element_by_xpath('//*[@id="inProgressCourseData"]/div/div[2]/p[1]/a')
             self.driver.execute_script("arguments[0].click();", study_element)
-            print('[INFO]开始进入学习')
+            print('[INFO]开始进入学习1')
         except TimeoutException:
             self.driver.quit()
             print('[WARING]登陆失败')
             input('请按任意键结束...')
-            sys.exit(1)
+            sys.exit(1)        
         
+        
+        try:
+            WebDriverWait(self.driver, 2, 0.5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="min-height"]/div[1]/div[2]/p/a')))
+            study_element = self.driver.find_element_by_xpath('//*[@id="min-height"]/div[1]/div[2]/p/a')
+            self.driver.execute_script("arguments[0].click();", study_element)
+            print('[INFO]开始进入学习2')
+        except TimeoutException:
+            print('[ERROR]未知错误')
+            sys.exit(-1)
+        
+        # --------------------------------------------------------------------------
         try:
             time.sleep(2)
             video_element = WebDriverWait(self.driver, 3, 0.5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="video"]')))
